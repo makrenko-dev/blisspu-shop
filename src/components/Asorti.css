@@ -1,0 +1,620 @@
+.main-container5 {
+  overflow: hidden;
+}
+
+.main-container5,
+.main-container5 * {
+  box-sizing: border-box;
+}
+
+.main-container5 {
+  position: relative;
+  width: 90vw;
+  height: 100%;
+  margin: 0 30px 149px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.group5 {
+  position: relative;
+  width: 80vw;
+  height: 44px;
+  margin: 100px 0 0 0;
+  z-index: 1;
+}
+.text5 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.884px;
+  text-align: left;
+}
+.pic5 {
+  position: absolute;
+  width: 61.31%;
+  height: 4.55%;
+  top: 79.55%;
+  left: 38.69%;
+  background: url(../assets/images/asline.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.wrapper5 {
+  position: relative;
+  width: 80vw;
+  height: 200vh;
+  margin: 85px 0 0 11px;
+  z-index: 14;
+}
+.section5 {
+  position: absolute;
+  width: 32.25%;
+  height: 65.8%;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+  z-index: 12;
+  overflow: hidden;
+}
+.pic-52 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  top: 0;
+  background: url(../assets/images/as1.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 13;
+}
+.wrapper-52 {
+  position: absolute;
+  width: 32.25%;
+  height: 32.25%;
+  top: 0;
+  left: 33.87%;
+  background: rgb(255, 255, 255);
+  z-index: 2;
+  overflow: hidden;
+}
+.pic-53 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  left: 0;
+  background: url(../assets/images/as2.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
+.group-52 {
+  position: absolute;
+  width: 32.25%;
+  height: 32.25%;
+  top: 0;
+  left: 67.75%;
+  background: rgb(255, 255, 255);
+  z-index: 10;
+  overflow: hidden;
+}
+.pic-54 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  left: 0;
+  background: url(../assets/images/as3.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 11;
+}
+.section-52 {
+  position: absolute;
+  width: 32.25%;
+  height: 32%;
+  top: 33.87%;
+  left: 33.87%;
+  background: rgb(105, 79, 66);
+  z-index: 4;
+  overflow: hidden;
+  text-align: center;
+}
+.text-52 {
+  position: relative;
+  height: 29.15%;
+  top: 35.43%;
+  font-family: Cormorant, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 86px;
+  font-weight: 400;
+  line-height: 116px;
+  text-align: center;
+  letter-spacing: -3.84px;
+  z-index: 5;
+}
+.group-53 {
+  position: absolute;
+  width: 32.25%;
+  height: 66.8%;
+  top: 33.87%;
+  left: 67.75%;
+  background: rgb(255, 255, 255);
+  z-index: 14;
+  overflow: hidden;
+}
+.pic-55 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url(../assets/images/as6.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 15;
+}
+.wrapper-53 {
+  position: absolute;
+  width: 32.25%;
+  height: 32.25%;
+  top: 67.75%;
+  left: 0;
+  background: rgb(255, 255, 255);
+  z-index: 8;
+  overflow: hidden;
+}
+.img5 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url(../assets/images/as4.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 9;
+}
+.group-54 {
+  position: absolute;
+  width: 32.25%;
+  height: 32.25%;
+  top: 67.75%;
+  left: 33.87%;
+  background: rgb(255, 255, 255);
+  z-index: 6;
+  overflow: hidden;
+}
+.pic-56 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url(../assets/images/as5.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 7;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .main-container5 {
+  overflow: hidden;
+}
+
+.main-container5,
+.main-container5 * {
+  box-sizing: border-box;
+}
+
+.main-container5 {
+  position: relative;
+  width: 90vw;
+  height: auto;
+  margin: 0 30px 149px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.group5 {
+  position: relative;
+  width: 80vw;
+  height: 44px;
+  margin: 100px 0 0 0;
+  z-index: 1;
+}
+.text5 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.884px;
+  text-align: left;
+}
+.pic5 {
+  position: absolute;
+  width: 61.31%;
+  height: 4.55%;
+  top: 79.55%;
+  left: 38.69%;
+  background: url(../assets/images/asline.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.wrapper5 {
+  position: relative;
+  width: 80vw;
+  height: 110vh;
+  margin: 85px 0 0 11px;
+  z-index: 14;
+}
+.section5 {
+  position: absolute;
+  width: 300px;
+  height: 620px;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+  z-index: 12;
+  overflow: hidden;
+}
+.pic-52 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  top: 0;
+ 
+  background: url(../assets/images/as1.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 13;
+}
+.wrapper-52 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left: 33.87%;
+  background: rgb(255, 255, 255);
+  z-index: 2;
+  overflow: hidden;
+}
+.pic-53 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  left: 0;
+  background: url(../assets/images/as2.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
+.group-52 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left: 67.75%;
+  background: rgb(255, 255, 255);
+  z-index: 10;
+  overflow: hidden;
+}
+.pic-54 {
+  position: relative;
+ width: auto;
+  height: 100%;
+  left: 0;
+  background: url(../assets/images/as3.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 11;
+}
+.section-52 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 320px;
+  left: 33.87%;
+  background: rgb(105, 79, 66);
+  z-index: 4;
+  overflow: hidden;
+  text-align: center;
+}
+.text-52 {
+  position: relative;
+  height: 29.15%;
+  top: 100px;
+  font-family: Cormorant, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 85px;
+  font-weight: 400;
+  line-height: 116px;
+  text-align: left;
+  letter-spacing: -3.84px;
+  z-index: 5;
+}
+.group-53 {
+  position: absolute;
+  width: 300px;
+  height: 620px;
+  top: 320px;
+  left: 67.75%;
+  background: rgb(255, 255, 255);
+  z-index: 14;
+  overflow: hidden;
+}
+.pic-55 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  top: 0;
+  background: url(../assets/images/as6.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 15;
+}
+.wrapper-53 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 640px;
+  left: 0;
+  background: rgb(255, 255, 255);
+  z-index: 8;
+  overflow: hidden;
+}
+.img5 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url(../assets/images/as4.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 9;
+}
+.group-54 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 640px;
+  left: 33.87%;
+  background: rgb(255, 255, 255);
+  z-index: 6;
+  overflow: hidden;
+}
+.pic-56 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url(../assets/images/as5.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 7;
+}
+
+}
+
+@media (max-width: 991px) {
+  .main-container5 {
+  overflow: hidden;
+}
+
+.main-container5,
+.main-container5 * {
+  box-sizing: border-box;
+}
+
+.main-container5 {
+  position: relative;
+  width: 90vw;
+  height: auto;
+  margin: 0 30px 149px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.group5 {
+  position: relative;
+  width: 80vw;
+  height: 44px;
+  margin: 100px 0 0 0;
+  z-index: 1;
+}
+.text5 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.884px;
+  text-align: left;
+}
+.pic5 {
+  position: absolute;
+  width: 450px;
+  height: 4.55%;
+  top: 79.55%;
+  left: 380px;
+  background: url(../assets/images/asline.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.wrapper5 {
+  position: relative;
+  width: auto;
+  height: 2100px;
+  margin: 85px 0 0 11px;
+  z-index: 14;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+.section5 {
+  position: absolute;
+  width: 400px;
+  height: 820px;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+  z-index: 12;
+  overflow: hidden;
+}
+.pic-52 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  top: 0;
+ 
+  background: url(../assets/images/as1.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 13;
+}
+.wrapper-52 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  top: 0;
+  left: 420px;
+  background: rgb(255, 255, 255);
+  z-index: 2;
+  overflow: hidden;
+}
+.pic-53 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  left: 0;
+  background: url(../assets/images/as2.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
+.group-52 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  top: 20px;
+  left: 420px;
+  background: rgb(255, 255, 255);
+  z-index: 10;
+  overflow: hidden;
+}
+.pic-54 {
+  position: relative;
+ width: auto;
+  height: 100%;
+  left: 0;
+  background: url(../assets/images/as3.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 11;
+}
+.section-52 {
+  position: relative;
+  width: 820px;
+  height: 400px;
+  top: 40px;
+  left: 0;
+  background: rgb(105, 79, 66);
+  z-index: 4;
+  overflow: hidden;
+  text-align: center;
+}
+.text-52 {
+  position: relative;
+  height: 29.15%;
+  top: 100px;
+  font-family: Cormorant, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 85px;
+  font-weight: 400;
+  line-height: 116px;
+  text-align: left;
+  letter-spacing: -3.84px;
+  z-index: 5;
+}
+.group-53 {
+  position: absolute;
+  width: 400px;
+  height: 820px;
+  top: 1260px;
+  left: 420px;
+  background: rgb(255, 255, 255);
+  z-index: 14;
+  overflow: hidden;
+}
+.pic-55 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  top: 0;
+  background: url(../assets/images/as6.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 15;
+}
+.wrapper-53 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  top: 60px;
+  left: 0;
+  background: rgb(255, 255, 255);
+  z-index: 8;
+  overflow: hidden;
+}
+.img5 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url(../assets/images/as4.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 9;
+}
+.group-54 {
+ position: relative;
+  width: 400px;
+  height: 400px;
+  top: 80px;
+  left: 0;
+  background: rgb(255, 255, 255);
+  z-index: 6;
+  overflow: hidden;
+}
+.pic-56 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url(../assets/images/as5.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 7;
+}
+
+}

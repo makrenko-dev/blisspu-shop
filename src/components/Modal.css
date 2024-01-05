@@ -1,0 +1,19 @@
+/* Modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001; /* Make sure it's above the content */
+}
+
+.modal-content {
+  
+  padding: 20px;
+  /* Additional styling for your modal content */
+}

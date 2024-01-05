@@ -1,0 +1,27 @@
+.cart-counter1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.cart-counter-btn1 {
+  font-size: 16px;
+  width: 53px;
+  height: 53px;
+  cursor: pointer;
+  color: #000;
+  background-color: transparent;
+  border: 0.77px solid #694f42;
+}
+
+.cart-counter-quantity1 {
+  font-size: 18px;
+  font-weight: bold;
+  width: 53px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.77px solid #694f42;
+}

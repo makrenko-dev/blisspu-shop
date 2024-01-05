@@ -1,0 +1,204 @@
+.sp {
+  display: flex;
+  width: 80vw;
+  height: auto;
+  justify-content: center; 
+  margin: 0 auto; 
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+.main-container3 {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  margin: 0 auto; /* Центрирование по горизонтали */
+}
+.carousel-control-next-icon{
+	width: 49px;
+	height: 20px;
+	background-image: url(../assets/images/arrow2.png) ;
+}
+
+.carousel-control-prev-icon{
+	width: 49px;
+	height: 20px;
+	background-image: url(../assets/images/arrow3.png) ;
+}
+
+.carousel-indicators{
+	display: none;
+}
+.group3 {
+  position: relative;
+  width: 80vw;
+  height: 44px;
+  margin: 100px 0 0 70px;
+  z-index: 1;
+}
+.text3 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.884px;
+  text-align: left;
+}
+.pic3 {
+  position: absolute;
+  width: 57.31%;
+  height: 4.55%;
+  top: 79.55%;
+  left: 44.69%;
+  background: url(../assets/images/asline.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+.sp {
+  display: flex;
+  width: 80vw;
+  height: auto;
+  justify-content: center; 
+  margin: 0 auto; 
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+.main-container3 {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  margin: 0 auto 70px auto; /* Центрирование по горизонтали */
+}
+.carousel-control-next-icon{
+  width: 49px;
+  height: 20px;
+  background-image: url(../assets/images/arrow2.png) ;
+}
+
+.carousel-control-prev-icon{
+  width: 49px;
+  height: 20px;
+  background-image: url(../assets/images/arrow3.png) ;
+}
+
+.carousel-indicators{
+  display: none;
+}
+.group3 {
+  position: relative;
+  width: 80vw;
+  height: 44px;
+  margin: 100px 0 0 70px;
+  z-index: 1;
+}
+.text3 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.884px;
+  text-align: left;
+}
+.pic3 {
+  position: absolute;
+  width: 530px;
+  height: 4.55%;
+  top: 40px;
+  left: 460px;
+  background: url(../assets/images/asline.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+}
+
+@media (max-width: 991px) {
+ .sp {
+  display: flex;
+  width: 80vw;
+  height: auto;
+  justify-content: center; 
+  margin: 0 auto; 
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+.main-container3 {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  margin: 0 auto 70px auto; /* Центрирование по горизонтали */
+}
+.carousel-control-next-icon{
+  width: 49px;
+  height: 20px;
+  background-image: url(../assets/images/arrow2.png) ;
+}
+
+.carousel-control-prev-icon{
+  width: 49px;
+  height: 20px;
+  background-image: url(../assets/images/arrow3.png) ;
+}
+
+.carousel-indicators{
+  display: none;
+}
+.group3 {
+  position: relative;
+  width: 80vw;
+  height: 44px;
+  margin: 100px 0 0 70px;
+  z-index: 1;
+}
+.text3 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.884px;
+  text-align: left;
+}
+.pic3 {
+  position: absolute;
+  width: 380px;
+  height: 4.55%;
+  top: 40px;
+  left: 450px;
+  background: url(../assets/images/asline.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+}

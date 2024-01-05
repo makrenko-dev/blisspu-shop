@@ -1,0 +1,236 @@
+.main-container6,
+.main-container6 * {
+  box-sizing: border-box;
+
+}
+.main-container6 {
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  height: 2529px;
+  margin-left: 120px;
+  margin-right: 90px;
+}
+.section6 {
+  position: relative;
+  width: auto;
+  height: 22px;
+  margin: 50px 0 0 0;
+  z-index: 2;
+}
+.text6 {
+  position: relative;
+  height: 100%;
+  width: auto;
+  top: 0;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 0.54px;
+}
+.text-62 {
+  position: relative;
+  height: 100%;
+  top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 0.54px;
+  z-index: 2;
+}
+.text-63 {
+  position: relative;
+  height: 100%;
+  top: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 0.54px;
+  z-index: 1;
+}
+.text-64 {
+  display: block;
+  position: relative;
+  height: 44px;
+  margin: 50px 0 0 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.884px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+.box6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 50px 0 0 0;
+  z-index: 8;
+}
+.pic6 {
+  position: absolute;
+  width: 45.32%;
+  height: 37.22%;
+  top: 0;
+  left: 0;
+  background: url(../assets/images/as1.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 4;
+}
+.group6 {
+  position: absolute;
+  height: 30.38%;
+  top: 5.32%;
+  left: 52.16%;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+  z-index: 5;
+}
+.text-65 {
+  position: relative;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.text-66 {
+  position: relative;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.img6 {
+  position: absolute;
+  width: 45%;
+  height: 13.32%;
+  top: 33.34%;
+  left: 52.16%;
+  background: url(../assets/images/main.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 8;
+}
+.text-67 {
+  position: absolute;
+  width: 48.32%;
+  height: 32.83%;
+  top: 39.17%;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+  z-index: 6;
+}
+
+.group-62 {
+  position: absolute;
+  height: 20%;
+  left: 50.8%;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+  z-index: 10;
+  top: 61.17%;
+}
+.text-68 {
+  position: relative;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+
+}
+.text-69 {
+  position: relative;
+  font-family: Cormorant, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 3.2px;
+  left: 3%;
+}
+.pic-62 {
+  position: absolute;
+  width: 45.32%;
+  height: 20.47%;
+  top: 61.17%;
+  left: 0;
+  background: url(../assets/images/as8.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 9;
+}
