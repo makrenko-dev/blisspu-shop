@@ -45,8 +45,7 @@ useEffect(() => {
 
  const handleSubmit1 = async (event) => {
   event.preventDefault();
-  console.log('Inside handleSubmit');
-  console.log('cart',cart);
+
   // Collect cart data in the required format
   const cartData = cart.map((item) => ({
     productId: item.id,
@@ -66,13 +65,7 @@ useEffect(() => {
   const phoneNumber = formObject.phoneNumber;
   const deliveryMethod = formObject.deliveryMethod;
   const paymentMethod = formObject.paymentMethod;
-  console.log(firstName)
-  console.log(lastName)
-  console.log(email)
-  console.log(phoneNumber)
-  console.log(deliveryMethod)
-  console.log(paymentMethod)
-  console.log(cartData)
+
 
   if (!firstName || !lastName || !email || !phoneNumber || !deliveryMethod || !paymentMethod || cartData.length === 0) {
     // If any required field is empty, display an error message
@@ -91,10 +84,10 @@ useEffect(() => {
     selecthouse: paymentMethod,
     money: paymentMethod,
   };
-  console.log(requestData);
+
   // Make API call
   try {
-    console.log('send request')
+
     const response = await fetch('http://localhost:3000/api/order/createorder', {
       method: 'POST',
       headers: {
@@ -105,7 +98,7 @@ useEffect(() => {
     
     if (response.ok) {
       // Handle successful response, e.g., redirect to a success page
-      console.log(response);
+
       openModal();
       clearCart();
     } else {
@@ -176,10 +169,10 @@ const handlePayButtonClick = async () => {
 };
 
  const { targetLanguage } = useLanguage();
-  
+  const viewportWidth = window.innerWidth;
   return (
     <div className='main-containero'>
-      <div className='wrappero'>
+     <div className='wrappero'>
        <Link to="/" className='texto' style={{ textDecoration: 'none' }}>{targetLanguage === 'en'
         ? 'Main'
         : 'Головна'}</Link>
@@ -197,36 +190,9 @@ const handlePayButtonClick = async () => {
         ? 'Placing order'
         : 'Оформлення замовлення'}</Link>
       </div>
-      
-        <div className='boxo'>
-          <span className='text-ao'>{targetLanguage === 'en'
-        ? 'Order'
-        : 'Замовлення'}</span>
-          {cart.map((item) => (
-              <div key={item.productId}>
-                <span className='text-b'>{item.quantity}x {item.name}</span>
-                <span className='text-c'>{`${targetLanguage === 'en'
-        ? 'Price'
-        : 'Ціна'}: ${item.price} ${targetLanguage === 'en'
-        ? 'uah'
-        : 'грн'}`}</span>
-                <hr className='custom-hr'/>
-              </div>
-            ))}
-          <span className='text-11o'>{targetLanguage === 'en'
-        ? 'Order Amount'
-        : 'Всього до сплати'}</span>
-          <span className='text-12o'>{totalPrice} {targetLanguage === 'en'
-        ? 'uah'
-        : 'грн'}</span>
-          <button type='button' className='box-2o' onClick={handlePayButtonClick}>
-            <span className='text-13o'>{targetLanguage === 'en'
-        ? 'Checkout'
-        : 'Сплатити'}</span>
-            <div className='pic-2o' />
-          </button>
-        </div>
-   
+    <div className='wrappero11'>
+    <div className='wrappero1'>
+     
         <span className='text-14o'>{targetLanguage === 'en'
         ? 'Placing order'
         : 'Оформлення'}</span>
@@ -260,23 +226,58 @@ const handlePayButtonClick = async () => {
       ? 'We send our candles exclusively by Nova Poshta.'
       : 'Ми відправляємо свої свічки виключно Новою Поштою.'}
         {targetLanguage === 'en' && <br />}
+        {targetLanguage === 'uk' && <br />}
         {targetLanguage === 'en' && 'If you are in Dnipro, then delivering through the city.'}
         {targetLanguage === 'uk' && 'Якщо ви знаходитесь у Дніпрі, то доставка містом.'}
           </span>
         </div >
-         <div className='form-row'>
+       {viewportWidth < 1200 && viewportWidth > 991 ? (
+          <>
+            <div className='form-row1'>
+              <input
+                type='radio'
+                id='novaPoshta'
+                name='deliveryMethod'
+                value='novaPoshta'
+                checked={deliveryMethod === 'novaPoshta'}
+                onChange={handleDeliveryMethodChange}
+              />
+              <label htmlFor='novaPoshta' className='radio-label'>
+                {targetLanguage === 'en'
+                  ? 'Delivering by Nova Poshta'
+                  : 'Доставка новою поштою'}
+              </label>
+            </div>
+            <div className='form-row1'>
+              <input
+                type='radio'
+                id='cityDelivery'
+                name='deliveryMethod'
+                value='cityDelivery'
+                checked={deliveryMethod === 'cityDelivery'}
+                onChange={handleDeliveryMethodChange}
+              />
+              <label htmlFor='cityDelivery' className='radio-label'>
+                {targetLanguage === 'en'
+                  ? 'Delivery around the city'
+                  : 'Доставка по місту'}
+              </label>
+            </div>
+          </>
+        ) : (
+          <div className='form-row'>
             <input
               type='radio'
               id='novaPoshta'
               name='deliveryMethod'
               value='novaPoshta'
-             checked={deliveryMethod === 'novaPoshta'}
-             onChange={handleDeliveryMethodChange}
+              checked={deliveryMethod === 'novaPoshta'}
+              onChange={handleDeliveryMethodChange}
             />
             <label htmlFor='novaPoshta' className='radio-label'>
               {targetLanguage === 'en'
-        ? 'Delivering by Nova Poshta'
-        : 'Доставка новою поштою'}
+                ? 'Delivering by Nova Poshta'
+                : 'Доставка новою поштою'}
             </label>
             <input
               type='radio'
@@ -288,10 +289,12 @@ const handlePayButtonClick = async () => {
             />
             <label htmlFor='cityDelivery' className='radio-label'>
               {targetLanguage === 'en'
-        ? 'Delivery around the city'
-        : 'Доставка по місту'}
+                ? 'Delivery around the city'
+                : 'Доставка по місту'}
             </label>
           </div>
+        )}
+
 
         
         {deliveryMethod === 'novaPoshta' && (
@@ -306,36 +309,70 @@ const handlePayButtonClick = async () => {
         ? 'Payment method'
         : 'Спосіб оплати'}</span>
         </div>
-          <div className='form-row'>
-            <input
-              type='radio'
-              id='cardPayment'
-              name='paymentMethod'
-              value='cardPayment'
-              checked={paymentMethod === 'cardPayment'}
-              onChange={handlePaymentMethodChange}
-            />
-            <label htmlFor='cardPayment' className='radio-label'>
-              {targetLanguage === 'en'
-        ? 'Payment by details'
-        : 'Оплата за реквізитами'}
-            </label>
-            </div>
+          {viewportWidth < 1200 && viewportWidth > 991 ? (
+            <>
+              <div className='form-row1'>
+                <input
+                  type='radio'
+                  id='cardPayment'
+                  name='paymentMethod'
+                  value='cardPayment'
+                  checked={paymentMethod === 'cardPayment'}
+                  onChange={handlePaymentMethodChange}
+                />
+                <label htmlFor='cardPayment' className='radio-label'>
+                  {targetLanguage === 'en'
+                    ? 'Payment by details'
+                    : 'Оплата за реквізитами'}
+                </label>
+              </div>
+              <div className='form-row1'>
+                <input
+                  type='radio'
+                  id='cashPayment'
+                  name='paymentMethod'
+                  value='cashPayment'
+                  checked={paymentMethod === 'cashPayment'}
+                  onChange={handlePaymentMethodChange}
+                />
+                <label htmlFor='cashPayment' className='radio-label'>
+                  {targetLanguage === 'en'
+                    ? 'Cash on delivery'
+                    : 'Наложеним платежем'}
+                </label>
+              </div>
+            </>
+          ) : (
             <div className='form-row'>
-            <input
-              type='radio'
-              id='cashPayment'
-              name='paymentMethod'
-              value='cashPayment'
-              checked={paymentMethod === 'cashPayment'}
-              onChange={handlePaymentMethodChange}
-            />
-            <label htmlFor='cashPayment' className='radio-label'>
-              {targetLanguage === 'en'
-        ? 'Cash on delivery'
-        : 'Наложеним платежем'}
-            </label>
-          </div>
+              <input
+                type='radio'
+                id='cardPayment'
+                name='paymentMethod'
+                value='cardPayment'
+                checked={paymentMethod === 'cardPayment'}
+                onChange={handlePaymentMethodChange}
+              />
+              <label htmlFor='cardPayment' className='radio-label'>
+                {targetLanguage === 'en'
+                  ? 'Payment by details'
+                  : 'Оплата за реквізитами'}
+              </label>
+              <input
+                type='radio'
+                id='cashPayment'
+                name='paymentMethod'
+                value='cashPayment'
+                checked={paymentMethod === 'cashPayment'}
+                onChange={handlePaymentMethodChange}
+              />
+              <label htmlFor='cashPayment' className='radio-label'>
+                {targetLanguage === 'en'
+                  ? 'Cash on delivery'
+                  : 'Наложеним платежем'}
+              </label>
+            </div>
+          )}
+
       
         <span className='text-26o'>
         {targetLanguage === 'en'
@@ -345,6 +382,37 @@ const handlePayButtonClick = async () => {
         </span>      
       </form>
        {isModalOpen && <Modal onClose={closeModal} />}
+      </div>
+        <div className='boxo'>
+          <span className='text-ao'>{targetLanguage === 'en'
+        ? 'Order'
+        : 'Замовлення'}</span>
+          {cart.map((item) => (
+              <div key={item.productId}>
+                <span className='text-b'>{item.quantity}x {item.name}</span>
+                <span className='text-c'>{`${targetLanguage === 'en'
+        ? 'Price'
+        : 'Ціна'}: ${item.price} ${targetLanguage === 'en'
+        ? 'uah'
+        : 'грн'}`}</span>
+                <hr className='custom-hr'/>
+              </div>
+            ))}
+          <span className='text-11o'>{targetLanguage === 'en'
+        ? 'Order Amount'
+        : 'Всього до сплати'}</span>
+          <span className='text-12o'>{totalPrice} {targetLanguage === 'en'
+        ? 'uah'
+        : 'грн'}</span>
+          <button type='button' className='box-2o' onClick={handlePayButtonClick}>
+            <span className='text-13o'>{targetLanguage === 'en'
+        ? 'Checkout'
+        : 'Сплатити'}</span>
+            <div className='pic-2o' />
+          </button>
+        </div>
     </div>
+    </div>
+
   );
 }

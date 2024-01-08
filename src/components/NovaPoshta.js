@@ -65,7 +65,7 @@ const NovaPoshta = () => {
     const data = await fetchFilteredBranches(city, inputValue);
 
     // Log data and branchOptions for debugging
-    console.log('Data:', data);
+ 
     
     const branchOptions = data.map((branch) => ({
       value: branch,
@@ -73,7 +73,7 @@ const NovaPoshta = () => {
     }));
 
     // Log branchOptions for debugging
-    console.log('Branch Options:', branchOptions);
+
 
     setBranches(branchOptions.length > 0 ? branchOptions : []);
 

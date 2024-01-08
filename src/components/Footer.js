@@ -45,6 +45,14 @@ export default function Footer() {
     handleTranslate();
   }, [targetLanguage, textElements]);
 
+  const handleContactsClick = (event) => {
+    event.preventDefault();
+    const footerElement = document.getElementById('footer');
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div id='footer' className='main-container4'>
       <div className='wrapper4'>
@@ -65,7 +73,7 @@ export default function Footer() {
           <Link to="/all" className='text-44' style={{ textDecoration: 'none' }}>Каталог</Link>
           <Link to="/about" className='text-45' style={{ textDecoration: 'none' }}>Про нас</Link>
           <Link to="/help"  className='text-46' style={{ textDecoration: 'none' }}>Допомога</Link>
-          <Link to="/contacts" className='text-47' style={{ textDecoration: 'none' }}>Контакти</Link>
+          <Link to="/contacts" className='text-47' style={{ textDecoration: 'none' }} onClick={handleContactsClick} >Контакти</Link>
         </div>
       </div>
     </div>

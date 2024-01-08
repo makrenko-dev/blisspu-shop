@@ -274,7 +274,6 @@ useEffect(() => {
     fetch(`http://localhost:3000/api/product/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setProductData(data);
       })
       .catch((error) => console.error('Error fetching product data:', error));
@@ -284,7 +283,6 @@ useEffect(() => {
       .then((response) => response.json())
       .then((data) => {
         setAllProducts(data);
-        console.log(data);
       })
       .catch((error) => console.error('Error fetching all products data:', error));
   }, [id]);
@@ -296,7 +294,6 @@ useEffect(() => {
 };
 
  const handleCartToggle = () => {
-  console.log('Toggling cart...');
   toggleCart();
 };
 
@@ -308,15 +305,15 @@ const handleColorClick = (color, color_num) => {
 
 const addToCart = () => {
   try {
-     if (!selectedColors || selectedColors.length === 0) {
+    if (!selectedColors || selectedColors.length === 0) {
       // No color selected, display a message to the user
       Swal.fire({
-        title: 'Your title here',
-        text: 'Your message here',
-        icon: 'info',
+        title: targetLanguage === 'en' ? 'Choose color' : 'Оберіть колір',
+        text: targetLanguage === 'en' ? 'In order to add the product to the cart, select one of the available colors' : 'Для того, щоб додати товар до кошика оберід один з доступних кольорів',
+        icon: 'error',
         confirmButtonText: 'OK',
         buttonsStyling: false, // Disable default styling
-        buttonColor: '#694f42',
+        confirmButtonColor: '#694f42',
       });
 
       return;
@@ -340,6 +337,7 @@ const addToCart = () => {
           // Product is not in the cart with the selected color, add a new entry
           const newCartItem = {
             ...productData,
+            price: discountedPrice, // Use discounted price instead of regular price
             quantity,
             colors: [{ color: selectedColors[0]?.color, color_num: selectedColors[0]?.color_num }],
           };
@@ -384,7 +382,11 @@ const getSimilarColorProducts = () => {
 const getCurrency = () => {
     return targetLanguage === 'en' ? 'uah' : 'грн';
 };
+let discountedPrice;
 
+if (productData) {
+  discountedPrice = productData.price - (productData.price * (productData.discount / 100));
+}
   return (
     <div className='main-container76'>
      {productData ? (
@@ -407,34 +409,44 @@ const getCurrency = () => {
               />
               )}
             </div>
-        <span className='text-676'>{productData.name}</span>
-        <span className='text-776'>{productData.description}</span>
-        <span className='text-876'>Ціна:</span>
-        <span className='text-976'>{productData.price} {getCurrency()}</span>
-        <span className='text-a76'>
-          {productData.time < 10
-            ? '*Час горіння свічки приблизно 5 годин'
-            : productData.time >= 10 && productData.time < 30
-            ? '*Час горіння свічки приблизно від 10 до 30 годин'
-            : productData.time >= 30 && productData.time < 100
-            ? '*Час горіння свічки приблизно від 30 до 100 годин'
-            : ''}
-        </span>
-        <span className='text-b76'>Колір</span>
-       <div className='colors-container'>
-       {console.log(productData)}
-       {productData.colors.map((color, index) => (
-          <div key={index} className='color-item' onClick={() => handleColorClick(color.color, color.color_num)}>
-          {console.log(`Цвет ${index + 1}`, color.color)}
-            <div
-              className={`color-square ${selectedColors.some((c) => c.color === color.color) ? 'selected' : ''}`}
-              style={{ backgroundColor: color.color_num }}
-            />
-            <span className='color-text'>{color.color}</span>
+       <div className='container5567'>
+          <span className='text-676'>{productData.name}</span>
+          <span className='text-776'>{productData.description}</span>
+          <div className='container55'>
+          <span className='text-876'>Ціна:</span>
+            {productData.discount !== 0 ? (
+              <>
+              <span className='text-976'>{`${discountedPrice.toFixed(2)} ${getCurrency()}`}</span>
+              <span className='text-3c1'>{`${productData.price} грн`}</span>
+              </>
+            ) : (
+              <span className='text-976'>{productData.price} {getCurrency()}</span>
+            )}
+           </div>
+          <span className='text-a76'>
+            {productData.time < 10
+              ? '*Час горіння свічки приблизно 5 годин'
+              : productData.time >= 10 && productData.time < 30
+              ? '*Час горіння свічки приблизно від 10 до 30 годин'
+              : productData.time >= 30 && productData.time < 100
+              ? '*Час горіння свічки приблизно від 30 до 100 годин'
+              : ''}
+          </span>
+          <span className='text-b76'>Колір</span>
+          <div className='colors-container'>
+            
+            {productData.colors.map((color, index) => (
+              <div key={index} className='color-item' onClick={() => handleColorClick(color.color, color.color_num)}>
+                <div
+                  className={`color-square ${selectedColors.some((c) => c.color === color.color) ? 'selected' : ''}`}
+                  style={{ backgroundColor: color.color_num }}
+                />
+                <span className='color-text'>{color.color}</span>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-        <span className='text-1076'>Є в наявності</span>
+          <span className='text-1076'>Є в наявності</span>
+        </div>
       </div>
        <div className='wrapper-676'>
         <div className='section76'>
@@ -452,20 +464,27 @@ const getCurrency = () => {
         <div className='pic-376' />
          </span>
       </div>
-      <div className='wrapper-976'>
-        <div className='wrapper-a76'>
-          <div className='img-376' />
-        </div>
+     <div className='wrapper-976'>
+        <div className='tabs-container'>
+          <div className='tab'>
             <span className={`text-1576 ${activeTab === 'description' ? 'active' : ''}`} onClick={() => handleTabClick('description')}>Опис</span>
+          </div>
+          <div className='tab'>
             <span className={`text-1676 ${activeTab === 'compound' ? 'active' : ''}`} onClick={() => handleTabClick('compound')}>Склад</span>
-            <div className='underline'></div>
-            <div className='wrapper-a76'>
-              <div className='img-376' />
-            </div>
-            <span className='text-1776'>
-              {activeTab === 'description' ? productData.full_desc : productData.compound}
-            </span>
+          </div>
+        </div>
+        <div className='underline'></div>
+        <div className='content-container'>
+          <div className='wrapper-a76'>
+            <div className='img-376' />
+          </div>
+          <span className='text-1776'>
+            {activeTab === 'description' ? productData.full_desc : productData.compound}
+          </span>
+        </div>
       </div>
+
+
       <span className='text-1876'>Схожі пропозиції</span>
       
       <div className='similar-products-container' >

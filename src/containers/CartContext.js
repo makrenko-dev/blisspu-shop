@@ -50,17 +50,26 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const clearCartInLocalStorage = () => {
+    localStorage.removeItem('cart');
+    localStorage.removeItem('cartLastUpdateTime');
+  };
+
   useEffect(() => {
     const currentTime = new Date().getTime();
     // Check if more than 24 hours have passed since the last update
     if (currentTime - lastUpdateTime > oneDayInMilliseconds) {
       clearCart(); // Clear the cart if more than 24 hours have passed
+      clearCartInLocalStorage(); // Clear cart in localStorage
     } else {
       localStorage.setItem('cart', JSON.stringify(cart));
     }
     // Update the last update time
     localStorage.setItem('cartLastUpdateTime', currentTime.toString());
   }, [cart, lastUpdateTime]);
+
+  useEffect(() => {
+  }, [cart]);
 
   return (
     <CartContext.Provider
@@ -74,6 +83,7 @@ export const CartProvider = ({ children }) => {
         updateCart,
         increaseQuantity,
         decreaseQuantity,
+        clearCartInLocalStorage,
       }}
     >
       {children}

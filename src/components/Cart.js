@@ -10,13 +10,12 @@ import { useLanguage } from './LanguageContext';
 const fallbackImage = "/assets/images/as7.png";
 
 const Cart = React.memo(({ handleClose }) => {
-  const { cart, removeFromCart, clearCart } = useCart();
+  const { cart, removeFromCart, clearCart, updateCart } = useCart();
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
   const { targetLanguage } = useLanguage();
-
   const textElements = [
     { className: 'offc', originalText: 'Ваше замовлення' },
     { className: 'text-131', originalText: 'Перейти до корзини' },
@@ -99,6 +98,40 @@ useEffect(() => {
   handleTranslate();
 }, [targetLanguage, textElements, cart]);
 
+ useEffect(() => {
+  const fetchCartFromServer = async () => {
+    try {
+      const cartDataToSend = cart.map(({ id, colors, quantity }) => ({
+        productId: id,
+        color: colors[0]?.color,
+        quantity: quantity,
+      }));
+
+      const response = await fetch('http://localhost:3000/api/product/basket', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ basket: JSON.stringify(cartDataToSend) }),
+      });
+
+      const responseBody = await response.text(); // Get the response body as text
+      const updatedCart = JSON.parse(responseBody);
+
+      // Update the local cart state
+      const updatedCartIds = updatedCart.map((item) => item.productId);
+      const newCart = cart.filter((item) => updatedCartIds.includes(item.id));
+
+      // Update the local cart state
+      updateCart(newCart);
+    } catch (error) {
+      console.error('Error updating cart from server:', error);
+    }
+  };
+
+  fetchCartFromServer();
+}, []); 
+
 
   const getCurrency = () => {
     return targetLanguage === 'en' ? 'uah' : 'грн';
@@ -120,7 +153,7 @@ useEffect(() => {
           <p className='p111'>
             {targetLanguage === 'en'
               ? 'Your cart is currently empty:('
-              : 'У кошику пока нічого немає:('}
+              : 'У кошику поки нічого немає:('}
           </p>
         ) : (
           cart.map((item, index) => (
@@ -159,7 +192,7 @@ useEffect(() => {
 
         <div>
           <button  className='section111' >
-            <Link to="/cart" className='text-131' style={{ textDecoration: 'none'}}>Перейти до корзини</Link>
+            <Link to="/cart" className='text-131' style={{ textDecoration: 'none'}}>Перейти до кошика</Link>
             <div className='img111' />
           </button >
         </div>

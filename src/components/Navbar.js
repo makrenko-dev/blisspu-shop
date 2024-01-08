@@ -8,6 +8,7 @@ import { useCart } from '../containers/CartContext';
 import translateText from './translateText';
 import { useLanguage } from './LanguageContext';
 import  './Navbar.css';
+import img from '../assets/images/cart.png';
 
 export default function Navbar() {
   const { isCartOpen, toggleCart, updateCart } = useCart();
@@ -73,7 +74,7 @@ export default function Navbar() {
     }
   };
 
-  return (
+   return (
     <BootstrapNavbar expand="lg" variant="light" style={{ background: 'rgb(105, 79, 66)' }} className="justify-content-between" >
       <BootstrapNavbar.Brand>
         <Link to="/" style={{ textDecoration: 'none', marginLeft: '80px' }}>
@@ -114,7 +115,7 @@ export default function Navbar() {
           </Nav.Link>
         </Nav>
       </BootstrapNavbar.Collapse>
-      <Offcanvas show={isCartOpen} onHide={handleCartClose}>
+      <Offcanvas show={isCartOpen} onHide={handleCartClose} placement="end">
         <Cart handleClose={handleCartClose} updateCart={updateCart} />
       </Offcanvas>
     </BootstrapNavbar>

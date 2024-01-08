@@ -98,6 +98,10 @@ useEffect(() => {
           вам неповторний ефект та приємні відчуття.
           <br />
         </span>
+        <div className='group-621'>
+        <div className='pic-62' />
+        <div className='pic-621' />
+        </div>
         <div className='group-62'>
           <span className='text-68'>
             Наші цінності
@@ -125,7 +129,6 @@ useEffect(() => {
           </span>
           <span className='text-69'>Blisspu</span>
         </div>
-        <div className='pic-62' />
        </div>
       </div>
   );

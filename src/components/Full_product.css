@@ -177,3 +177,106 @@
   background-size: 100% 100%;
   z-index: 69;
 }
+/* Стили для мобильных устройств */
+.mobile-filters {
+  width: 100%;
+}
+.mobile-buttons {
+  display: none;
+}
+
+/* Стили для планшетов и ноутбуков */
+.tablet-filters {
+  display: none;
+}
+
+/* Скрыть блок при ширине экрана больше 991px */
+@media screen and (min-width: 992px) {
+  .mobile-filters,
+  .mobile-sorting {
+    display: none;
+  }
+  .tablet-filters,
+  .sorting-show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main-container9 {
+    flex-direction: column;
+    height: auto;
+    min-height: 70vh;
+    margin: 0px 50px 130px 50px;
+  }
+  .text-container2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: flex-start; /* Изменено с center на flex-start */
+    align-items: flex-start;
+    margin-left: 40px;
+  }
+
+  .text-139,
+  .text-149,
+  .text-159 {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .text-container,
+  .text-container1,
+  .text-container2,
+  .product-grid {
+    margin-left: 0;
+  }
+
+  .main-all {
+    width: 100%;
+  }
+
+  .mobile-filters,
+  .mobile-sorting {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  .mobile-filters.show,
+  .mobile-sorting.show {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px;
+    position: relative;
+    left: 0;
+    margin-bottom: 20px;
+    color: black;
+    transition: height 0.3s ease;
+  }
+
+  .mobile-filters-content,
+  .mobile-sorting-content {
+    max-width: 100%;
+  }
+
+  .mobile-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25px;
+  }
+}

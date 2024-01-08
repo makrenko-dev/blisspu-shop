@@ -9,7 +9,7 @@
 
 .main-container404 {
   position: relative;
-  width: 100wv;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
 }
@@ -217,10 +217,15 @@
   z-index: 8;
 }
 .box-2404 {
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
   width: 398px;
   height: 74px;
-  margin: 55.885px 0 0 50.317px;
+  top: 78.96%;
+  left: 37%;
+  margin: 0 auto;
   background: #694f42;
   z-index: 15;
   border-radius: 10px;
@@ -282,4 +287,580 @@
   background-size: 100% 100%;
   transform: rotate(15deg);
   z-index: 2;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .main-container404 {
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.box404 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  z-index: 19;
+}
+.img404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+}
+.img-2404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 0;
+  left: 39.68%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 6;
+}
+.img-3404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 0;
+  left: 79.37%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 12;
+}
+.img-4404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 0%;
+  left: 59.52%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 9;
+}
+.pic404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 0%;
+  left: 19.84%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 3;
+}
+.pic-2404 {
+  position: absolute;
+ width: 200px;
+  height: 250px;
+  top: 32.04%;
+  left: 79.37%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 13;
+}
+.img-5404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 32.04%;
+  left: 39.68%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 7;
+}
+.pic-3404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 32.04%;
+  left: 0%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 1;
+}
+.pic-4404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 32.04%;
+  left: 19.84%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 4;
+}
+.img-6404 {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 32.04%;
+  left: 59.52%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 10;
+}
+.text404 {
+  display: flex;
+  position: relative;
+  height: auto;
+  top: 0px;
+  left: 0px;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 250px;
+  font-weight: 300;
+  line-height: 260px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 19;
+}
+.txt444{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+.text-2404 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 600px;
+  height: auto;
+  top: 0px;
+  left: 0px;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.256px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  z-index: 18;
+}
+.img-7404 {
+  position: absolute;
+  width: 20.63%;
+  height: 35.92%;
+  top: 64.08%;
+  left: 19.84%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 5;
+}
+.pic-5404 {
+  position: absolute;
+  width: 20.63%;
+  height: 35.92%;
+  top: 64.08%;
+  left: 59.52%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 11;
+}
+.img-8404 {
+  position: absolute;
+  width: 20.63%;
+  height: 35.92%;
+  top: 64.08%;
+  left: 400px;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 8;
+}
+.box-2404 {
+  position: relative;
+  width: 398px;
+  height: 74px;
+  top: 0;
+  left: 0;
+  margin: 50px 0;
+  background: #694f42;
+  z-index: 15;
+  border-radius: 10px;
+  box-shadow: 20px 20px 60px 0 rgba(105, 79, 66, 0.35);
+}
+.text-3404 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 40.54%;
+  top: 29.73%;
+  left: 7.29%;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #eee6d3;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  z-index: 16;
+  text-shadow: 20px 20px 60px rgba(105, 79, 66, 0.35);
+}
+.img-9404 {
+  position: absolute;
+  width: 6.47%;
+  height: 14.93%;
+  top: 42.54%;
+  left: 86.43%;
+  background: url(../assets/images/arrow1.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 17;
+}
+.pic-6404 {
+  position: absolute;
+  width: 20.63%;
+  height: 35.92%;
+  top: 64.08%;
+  left: 79.37%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 14;
+}
+.pic-7404 {
+  position: absolute;
+  width: 20.63%;
+  height: 35.92%;
+  top: 64.08%;
+  left: 0%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 2;
+}
+}
+
+@media (max-width: 991px) {
+   .main-container404 {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  margin: 0 auto;
+}
+.box404 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  z-index: 19;
+}
+.img404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 0;
+  left: 0;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+}
+.img-2404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 0%;
+  left:32%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(55deg);
+  z-index: 6;
+}
+.img-3404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 22.04%;
+  left: 700px;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 12;
+}
+.img-4404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 0%;
+  left: 59.52%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 9;
+}
+.pic404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 15.04%;
+  left: 0;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 3;
+}
+.pic-2404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 32.04%;
+  left: 79.37%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 13;
+}
+.img-5404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 16.04%;
+  left: 39.68%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 7;
+}
+.pic-3404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 48.04%;
+  left: 0%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 1;
+}
+.pic-4404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 32.04%;
+  left: 19.84%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 4;
+}
+.img-6404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 45.04%;
+  left: 59.52%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 10;
+}
+.text404 {
+  display: flex;
+  position: relative;
+  height: auto;
+  top: 0px;
+  left: 0px;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 250px;
+  font-weight: 300;
+  line-height: 260px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 19;
+}
+.txt444{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+.text-2404 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 600px;
+  height: auto;
+  top: 0px;
+  left: 0px;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.256px;
+  text-align: center;
+  letter-spacing: 0.26px;
+  z-index: 18;
+}
+.img-7404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 74.08%;
+  left: 29.84%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(45deg);
+  z-index: 5;
+}
+.pic-5404 {
+  position: absolute;
+ width: 400px;
+  height: 500px;
+  top: 64.08%;
+  left: 59.52%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(-15deg);
+  z-index: 11;
+}
+.img-8404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 54.08%;
+  left: 300px;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 8;
+}
+.box-2404 {
+  position: relative;
+  width: 398px;
+  height: 74px;
+  top: 0;
+  left: 0;
+  margin: 50px 0;
+  background: #694f42;
+  z-index: 15;
+  border-radius: 10px;
+  box-shadow: 20px 20px 60px 0 rgba(105, 79, 66, 0.35);
+}
+.text-3404 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 40.54%;
+  top: 29.73%;
+  left: 7.29%;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #eee6d3;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  z-index: 16;
+  text-shadow: 20px 20px 60px rgba(105, 79, 66, 0.35);
+}
+.img-9404 {
+  position: absolute;
+  width: 6.47%;
+  height: 14.93%;
+  top: 42.54%;
+  left: 86.43%;
+  background: url(../assets/images/arrow1.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 17;
+}
+.pic-6404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 84.08%;
+  left: 79.37%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 14;
+}
+.pic-7404 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 64.08%;
+  left: 0%;
+  background: url(../assets/images/sv.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  transform: rotate(15deg);
+  z-index: 2;
+}
 }

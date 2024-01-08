@@ -79,7 +79,7 @@ export default function Main() {
           </span>
         </div>
         <div className='bbut'>
-          <div className='bbut'>
+          <div className='bbut1'>
           <Link to="/about" className='text-26' style={{ textDecoration: 'none' }}>Дізнатися більше</Link>
           <div className='img-23'></div>
           </div>

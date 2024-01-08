@@ -5,8 +5,8 @@ import translateText from '../components/translateText';
 import { useLanguage } from '../components/LanguageContext';
 const fallbackImage = "/assets/images/as7.png";
 
-export default function Card_all({ id, name, translatedDescription, price, image}) {
-
+export default function Card_all({ id, name, translatedDescription, price, discount, image}) {
+const discountedPrice = price - (price * (discount / 100));
  const { targetLanguage } = useLanguage();
  const getCurrency = () => {
     return targetLanguage === 'en' ? 'uah' : 'грн';
@@ -30,7 +30,10 @@ export default function Card_all({ id, name, translatedDescription, price, image
       <span className='text-2c'>{name}</span>
       <span className='text-4c'>{translatedDescription}</span>
       <div className='group-3c'>
-        <span className='text-3c'>{price} {getCurrency()}</span>
+        <span className='text-3c11'>{`${price} грн`}</span>
+        {discount !== 0 && (
+          <span className='text-4c1'>{`${discountedPrice.toFixed(2)}  ${getCurrency()}`}</span>
+        )}
       </div>
     </Link>
   );
