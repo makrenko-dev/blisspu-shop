@@ -350,8 +350,8 @@ const viewportWidth = window.innerWidth;
               ? 'Your cart is empty.'
               : 'У вашому кошику поки що нічого немає, але наші свічки дуууууже зачекалися тебе :)'}
           </span>
-          <div className='group-6ca' style={{ width: `${buttonWidth}px` }}>
-            <Link to="/" className='text-2aca'>
+          <div className='group-6ca' style={{ width: `373px`, textDecoration:'none' }}>
+            <Link to="/" className='text-2aca' style={{textDecoration:'none' }}>
               {targetLanguage === 'en' ? 'Back to Home' : 'Повернутися на головну'}
             </Link>
             <div className='img1111' />
