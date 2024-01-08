@@ -53,6 +53,21 @@ export default function Footer() {
     }
   };
 
+  const handleEmailClick = () => {
+  window.location.href = 'mailto:Blisspu.ua@gmail.com';
+};
+const handleInstagramClick = () => {
+  window.open('https://www.instagram.com/blisspu.ua?igsh=MXE2ZThsdzFncGozcA==', '_blank');
+};
+
+const handleTelegramClick = () => {
+  window.open('https://t.me/blisspu', '_blank');
+};
+
+const handlePhoneClick = () => {
+  window.location.href = 'tel:+380676546565';
+};
+
   return (
     <div id='footer' className='main-container4'>
       <div className='wrapper4'>
@@ -63,10 +78,10 @@ export default function Footer() {
           </span>
         </div>
         <div className='box4'>
-          <div className='img4' />
-          <div className='img-42' />
-          <div className='pic4' />
-          <div className='pic-42' />
+          <div className='img4' onClick={handleInstagramClick} style={{ cursor: 'pointer' }} />
+          <div className='img-42' onClick={handlePhoneClick} style={{ cursor: 'pointer' }} />
+          <div className='pic4' onClick={handleTelegramClick} style={{ cursor: 'pointer' }} />
+          <div className='pic-42' onClick={handleEmailClick} style={{ cursor: 'pointer' }} />
         </div>
         <div className='section-42'>
           <Link to="/" className='text-43' style={{ textDecoration: 'none' }}>Головна</Link>

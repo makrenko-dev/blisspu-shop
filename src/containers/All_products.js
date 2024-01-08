@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import About from '../components/About.js';
 import Full_product from '../components/Full_product';
-import Filter from '../components/Filter';
 
 
 

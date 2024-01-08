@@ -184,7 +184,7 @@ const handlePayButtonClick = async () => {
         <span className='text-4o'>/</span>
         <Link to="/cart" className='text-5o' style={{ textDecoration: 'none' }}> {targetLanguage === 'en'
         ? 'Cart'
-        : 'Корзина'}</Link>
+        : 'Кошик'}</Link>
         <span className='text-8o'>/</span>
         <Link to="/cart" className='text-9o' style={{ textDecoration: 'none' }}> {targetLanguage === 'en'
         ? 'Placing order'

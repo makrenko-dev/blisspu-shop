@@ -30,10 +30,16 @@ const discountedPrice = price - (price * (discount / 100));
       <span className='text-2c'>{name}</span>
       <span className='text-4c'>{translatedDescription}</span>
       <div className='group-3c'>
-        <span className='text-3c11'>{`${price} грн`}</span>
-        {discount !== 0 && (
-          <span className='text-4c1'>{`${discountedPrice.toFixed(2)}  ${getCurrency()}`}</span>
+      {discount !== 0 ? (
+          <>
+            <span className='text-4c1111'>{`${discountedPrice.toFixed(2)}  ${getCurrency()}`}</span>
+            <span className='text-3c11'>{`${price} грн`}</span>
+          </>
+        ) : (
+          <span className='text-4c1111'>{`${price} грн`}</span>
         )}
+        
+        
       </div>
     </Link>
   );

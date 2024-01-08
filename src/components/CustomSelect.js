@@ -53,7 +53,7 @@ const CustomSelect = ({ onChange }) => {
   };
 
   useEffect(() => {
-    console.log('Updated selectOptions:', selectOptions);
+    
   }, [selectOptions]);
 
   useEffect(() => {

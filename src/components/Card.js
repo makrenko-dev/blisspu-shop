@@ -22,11 +22,16 @@ export default function Card({ id, name, description, price, discount, img }) {
         </div>
       </div>
       <span className='text-2c'>{name}</span>
-      <div className='group-3c1'>
-        <span className='text-3c1'>{`${price} грн`}</span>
-        {discount !== 0 && (
-          <span className='text-4c1'>{`${discountedPrice.toFixed(2)}  ${getCurrency()}`}</span>
+      <div className='group-3c11'>
+      {discount !== 0 ? (
+          <>
+            <span className='text-4c11'>{`${discountedPrice.toFixed(2)} ${getCurrency()}`}</span>
+            <span className='text-3c11'>{`${price} грн`}</span>
+          </>
+        ) : (
+          <span className='text-4c11'>{`${price} грн`}</span>
         )}
+
       </div>
     </Link>
   );

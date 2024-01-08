@@ -9,9 +9,9 @@ export default function Main() {
 
   const textElements = [
     { className: 'text2', originalText: 'Про нас' },
-    { className: 'text-23', originalText: 'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.' },
-    { className: 'text-24', originalText: 'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.' },
-    { className: 'text-25', originalText: 'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.' },
+    { className: 'text-23', originalText: 'Ласкаво просимо в світ ароматних свічок, де ми створюємо неповторні аромати з натуральних матеріалів для вашого затишку. ' },
+    { className: 'text-24', originalText: 'Наша мета - принести радість та гармонію у ваш дім через невимушену теплоту наших свічок.' },
+    { className: 'text-25', originalText: 'Приєднуйтеся до нашої спільноти ароматних насолод та долучайтесь до створення особливих моментів в вашому просторі.' },
     { className: 'text-26', originalText: 'Дізнатися більше' },
     // Добавьте другие элементы, как необходимо
   ];
@@ -66,16 +66,13 @@ export default function Main() {
         </div>
         <div className='wrapper-22'>
           <span className='text-23'>
-            Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis.
+            Ласкаво просимо в світ ароматних свічок, де ми створюємо неповторні аромати з натуральних матеріалів для вашого затишку. 
           </span>
           <span className='text-24'>
-            Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis.
+            Наша мета - принести радість та гармонію у ваш дім через невимушену теплоту наших свічок.
           </span>
           <span className='text-25'>
-            Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis.
+          Приєднуйтеся до нашої спільноти ароматних насолод та долучайтесь до створення особливих моментів в вашому просторі.
           </span>
         </div>
         <div className='bbut'>

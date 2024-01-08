@@ -152,7 +152,7 @@
 .text-24 {
   display: inline-block;
   position: relative;
-  height: 90px;
+  height: auto;
   margin: 5px 0 0 0;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
@@ -380,7 +380,7 @@
 .text-24 {
   display: inline-block;
   position: relative;
-  height: 90px;
+  height: auto;
   margin: 5px 0 0 0;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
@@ -445,7 +445,7 @@
 }
 .box-22 {
   position: relative;
-  left: -170px;
+  left: -210px;
   top: -5px;
   width: 290px;
   height: 50px;
@@ -457,6 +457,15 @@
 .bbut {
   top: 220px;
   left: 240px;
+  position: relative;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bbut1 {
+ 
+  left: 60px;
   position: relative;
   width: auto;
   display: flex;
@@ -622,7 +631,7 @@
 .text-24 {
   display: inline-block;
   position: relative;
-  height: 90px;
+  height: auto;
   margin: 5px 0 0 0;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
