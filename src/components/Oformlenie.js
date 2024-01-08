@@ -13,6 +13,8 @@ export default function Oformlenie() {
 
    const [deliveryMethod, setDeliveryMethod] = useState('');
   const [city, setCity] = useState('');
+   const [selectedCity, setSelectedCity] = useState(''); // Added selectedCity state
+  const [selectedHouse, setSelectedHouse] = useState(''); // Added selectedHouse state
   const [branches, setBranches] = useState([]);
   const [paymentMethod, setPaymentMethod] = useState('cardPayment');
   const handlePaymentMethodChange = (e) => setPaymentMethod(e.target.value);
@@ -31,6 +33,10 @@ export default function Oformlenie() {
     setIsModalOpen(false);
   };
 
+const handleCityAndHouseChange = (city, house) => {
+    setSelectedCity(city);
+    setSelectedHouse(house);
+  };
 
 
 useEffect(() => {
@@ -67,24 +73,48 @@ useEffect(() => {
   const paymentMethod = formObject.paymentMethod;
 
 
-  if (!firstName || !lastName || !email || !phoneNumber || !deliveryMethod || !paymentMethod || cartData.length === 0) {
-    // If any required field is empty, display an error message
-    alert('Please fill in all required fields');
+  let requestData;
+
+if (!firstName || !lastName || !email || !phoneNumber || !deliveryMethod || !paymentMethod || cartData.length === 0) {
+  // If any required field is empty, display an error message
+  alert(targetLanguage === 'en'
+    ? 'Please fill in all required fields'
+    : 'Будь-ласка, заповніть всі необхідні поля');
+  return;
+}
+
+if (deliveryMethod === 'novaPoshta') {
+  if (selectedCity === '' || selectedHouse === '') {
+    alert(targetLanguage === 'en'
+      ? 'Please fill in all required delivery fields'
+      : 'Будь-ласка, заповніть всі необхідні поля для доставки');
     return;
   }
 
   // Combine form and cart data
-  const requestData = {
+  requestData = {
     phone_number: phoneNumber,
     email: email,
     first_name: firstName,
     last_name: lastName,
     infOrder: JSON.stringify(cartData),
-    selectcity: deliveryMethod,
-    selecthouse: paymentMethod,
+    selectcity: selectedCity,
+    selecthouse: selectedHouse,
     money: paymentMethod,
   };
-
+} else {
+  requestData = {
+    phone_number: phoneNumber,
+    email: email,
+    first_name: firstName,
+    last_name: lastName,
+    infOrder: JSON.stringify(cartData),
+    selectcity: 'доставка по місту',
+    selecthouse: 'доставка по місту',
+    money: paymentMethod,
+  };
+}
+  
   // Make API call
   try {
 
@@ -265,7 +295,8 @@ const handlePayButtonClick = async () => {
             </div>
           </>
         ) : (
-          <div className='form-row'>
+         viewportWidth  > 1200 ? (
+          <div className='form-row1'>
             <input
               type='radio'
               id='novaPoshta'
@@ -293,13 +324,43 @@ const handlePayButtonClick = async () => {
                 : 'Доставка по місту'}
             </label>
           </div>
+          ):(
+           <div className='form-row'>
+            <input
+              type='radio'
+              id='novaPoshta'
+              name='deliveryMethod'
+              value='novaPoshta'
+              checked={deliveryMethod === 'novaPoshta'}
+              onChange={handleDeliveryMethodChange}
+            />
+            <label htmlFor='novaPoshta' className='radio-label'>
+              {targetLanguage === 'en'
+                ? 'Delivering by Nova Poshta'
+                : 'Доставка новою поштою'}
+            </label>
+            <input
+              type='radio'
+              id='cityDelivery'
+              name='deliveryMethod'
+              value='cityDelivery'
+              checked={deliveryMethod === 'cityDelivery'}
+              onChange={handleDeliveryMethodChange}
+            />
+            <label htmlFor='cityDelivery' className='radio-label'>
+              {targetLanguage === 'en'
+                ? 'Delivery around the city'
+                : 'Доставка по місту'}
+            </label>
+          </div>
+          )
         )}
 
 
         
         {deliveryMethod === 'novaPoshta' && (
           <div className='form-row'>
-            <NovaPoshta />
+             <NovaPoshta onSelectCityAndHouse={handleCityAndHouseChange} />
           </div>
         )}
 
