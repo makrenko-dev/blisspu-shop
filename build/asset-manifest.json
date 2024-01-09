@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.204adc77.css",
+    "main.js": "/static/js/main.827ae2f8.js",
+    "static/media/main.png": "/static/media/main.a8e69391e3a73b022f78.png",
+    "static/media/as8.png": "/static/media/as8.872e289d7cfedf2e532c.png",
+    "static/media/as1.png": "/static/media/as1.691e17b91550311a59f6.png",
+    "static/media/as6.png": "/static/media/as6.884d78445402d18bccf2.png",
+    "static/media/as3.png": "/static/media/as3.92d83034bdfbf43e8cc5.png",
+    "static/media/a1.png": "/static/media/a1.abcea621db0448775780.png",
+    "static/media/candle_pro.png": "/static/media/candle_pro.c29c58c7e5cbeb4edd7a.png",
+    "static/media/a2.png": "/static/media/a2.6d9493ddfda64f954ebc.png",
+    "static/media/as2.png": "/static/media/as2.74b441b1451fbf76e335.png",
+    "static/media/as5.png": "/static/media/as5.cd3716ed677c840dbf74.png",
+    "static/media/as4.png": "/static/media/as4.e42dd060788b644eb65a.png",
+    "static/media/as9.png": "/static/media/as9.599dcee3e26a0a0543cb.png",
+    "static/media/sv.png": "/static/media/sv.987d7c76dc9b0abf94f3.png",
+    "index.html": "/index.html",
+    "main.204adc77.css.map": "/static/css/main.204adc77.css.map",
+    "main.827ae2f8.js.map": "/static/js/main.827ae2f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.204adc77.css",
+    "static/js/main.827ae2f8.js"
+  ]
+}
