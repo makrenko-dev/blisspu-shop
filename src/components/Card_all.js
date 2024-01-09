@@ -27,7 +27,7 @@ const discountedPrice = price - (price * (discount / 100));
           />
         }
       </div>
-      <span className='text-2c'>{name}</span>
+      <span className='text-2c'>{name}</span><br/ >
       <span className='text-4c'>{translatedDescription}</span>
       <div className='group-3c'>
       {discount !== 0 ? (

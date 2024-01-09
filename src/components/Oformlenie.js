@@ -325,7 +325,7 @@ const handlePayButtonClick = async () => {
             </label>
           </div>
           ):(
-           <div className='form-row'>
+           <div className='form-row1'>
             <input
               type='radio'
               id='novaPoshta'

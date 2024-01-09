@@ -49,6 +49,7 @@
 .text-4c {
   display: inline-block;
   position: relative;
+  min-width: 200px;
   height: 28px;
   margin: 15px 0 0 0;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
@@ -61,6 +62,7 @@
   line-height: 28px;
   text-align: left;
   letter-spacing: 0.26px;
+  white-space: normal;
   z-index: 3;
   left: 0;
 }

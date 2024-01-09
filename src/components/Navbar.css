@@ -129,9 +129,9 @@
 
 .img {
   position: absolute;
-  width: 15px;
-  height: 17px;
-  top: 39%;
+  width: 20px;
+  height: 25px;
+  top: 33%;
   margin-left: 10px;
   right: 5vw;
   background: url(../assets/images/cart.png)

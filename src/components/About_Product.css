@@ -197,6 +197,7 @@
   flex-wrap: wrap;
   width: 500px;
   height: auto;
+  min-height: 100px;
   left: 550px;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
@@ -219,6 +220,7 @@
   margin-top: 25px;
   width: 500px;
   height: auto;
+  min-height: 100px;
   left: 550px;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
@@ -277,7 +279,7 @@
 .text-a76 {
   position: relative;
   display: block;
-  margin-top: 64px;
+  margin-top: 60px;
   width: 545px;
   height: auto;
   left: 550px;
