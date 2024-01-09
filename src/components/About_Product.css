@@ -279,7 +279,7 @@
 .text-a76 {
   position: relative;
   display: block;
-  margin-top: 60px;
+  margin-top: 64px;
   width: 545px;
   height: auto;
   left: 550px;
@@ -1117,11 +1117,11 @@
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+  margin-bottom: 30px;
   width: 1000px;
-  top: -70px;
+  top: 0px;
   left: -485px;
   height: auto;
-  margin: 17px 0 0 0;
   z-index: 63;
 }
 .wrapper76 {

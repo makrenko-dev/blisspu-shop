@@ -18,7 +18,7 @@ const Cart = React.memo(({ handleClose }) => {
   const { targetLanguage } = useLanguage();
   const textElements = [
     { className: 'offc', originalText: 'Ваше замовлення' },
-    { className: 'text-131', originalText: 'Перейти до корзини' },
+    { className: 'text-131', originalText: 'Перейти до кошика' },
   ];
 
 useEffect(() => {
@@ -49,11 +49,11 @@ useEffect(() => {
 
         if (aromaElement && timeElement && colorElement) {
           let translatedName = item.aroma;
-          let translatedTimeText = item.time === 5
+          let translatedTimeText = item.time < 10
             ? '5 hours'
-            : item.time > 10 && item.time <= 30
+            : item.time > 9 && item.time < 30
               ? 'from 10 to 30 hours'
-              : item.time > 30 && item.time < 100
+              : item.time >= 30 && item.time < 100
                 ? 'from 30 to 100 hours'
                 : '';
 
@@ -72,13 +72,13 @@ useEffect(() => {
           aromaElement.textContent = `- ${translatedName}`;
           
           if (targetLanguage === 'uk') {
-            timeElement.textContent = `- ${item.time === 5
-              ? '5 годин'
-              : item.time > 10 && item.time <= 30
-                ? 'від 10 до 30 годин'
-                : item.time > 30 && item.time < 100
-                  ? 'від 30 до 100 годин'
-                  : ''}`;
+            timeElement.textContent = `- ${item.time < 10
+                      ? ' 5 годин'
+                      : item.time > 9 && item.time < 30
+                      ? ' від 10 до 30 годин'
+                      : item.time >= 30 && item.time < 100
+                      ? 'від 30 до 100 годин'
+                      : ''}`;
           } else {
             timeElement.textContent = `- ${translatedTimeText}`;
           }
@@ -139,6 +139,7 @@ useEffect(() => {
 
   return (
     <>
+
       <Offcanvas.Header closeButton style={{ width:'450px', backgroundColor: '#694F42',color: 'white',fontFamily: 'Montserrat Alternates, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif',
         fontSize: '22px',
         fontWeight: 400,
@@ -158,6 +159,7 @@ useEffect(() => {
         ) : (
           cart.map((item, index) => (
             <div key={item.id}>
+            {console.log(item.time)}
               <div style={{ marginBottom: '50px', display: 'flex' }}>
                 <div>
                   <img
@@ -169,17 +171,19 @@ useEffect(() => {
                     }}
                   />
                 </div>
+
                 <div style={{ marginLeft: '20px' }}>
                   <p className={`p121 p121-${index + 1}`} style={{ marginBottom: '0px', fontSize: '20px' }}>{item.name}</p>
                   <p className={`p122 p122-${index + 1}`} style={{ marginBottom: '0px', fontSize: '16px' }}>- {item.aroma}</p>
                   <p className={`p123 p123-${index + 1}`} style={{ marginBottom: '0px', fontSize: '16px' }}>
-                    - {item.time === 5
+                    - {item.time < 10
                       ? '5 годин'
-                      : item.time > 10 && item.time <= 30
-                        ? 'від 10 до 30 годин'
-                        : item.time > 30 && item.time < 100
-                          ? 'від 30 до 100 годин'
-                          : ''}
+                      : item.time > 9 && item.time < 30
+                      ? 'від 10 до 30 годин'
+                      : item.time >= 30 && item.time < 100
+                      ? ' від 30 до 100 годин'
+                      : ''}
+                  }
                   </p>
                   <p className={`p124 p124-${index + 1}`} style={{marginBottom:'0px',fontSize:'16px'}}>- {item.colors.map((colorObj) => colorObj.color).join(', ')}</p>
                   <p style={{ marginBottom: '0px', fontSize: '20px' }}>{item.price} {getCurrency()}</p>

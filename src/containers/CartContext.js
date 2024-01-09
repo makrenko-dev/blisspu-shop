@@ -14,9 +14,11 @@ export const CartProvider = ({ children }) => {
     setCart((prevCart) => [...prevCart, item]);
   };
 
-  const removeFromCart = (itemId) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
-  };
+  const removeFromCart = (itemId, color) => {
+  setCart((prevCart) =>
+    prevCart.filter((item) => item.id !== itemId || item.colors[0]?.color !== color)
+  );
+};
 
   const clearCart = () => {
     setCart([]);

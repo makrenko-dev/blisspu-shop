@@ -162,18 +162,18 @@ const translateColors = async (colors, targetLanguage) => {
       if (targetLanguage === 'en') {
         translatedName = await translateText(item.aroma, 'en');
         translatedSize = getTranslatedSize(item.size, 'en'); // Translate size to English
-        translatedTimeText = item.time === 5
+        translatedTimeText = item.time < 10
           ? '5 hours'
-          : item.time > 10 && item.time <= 30
+          : item.time > 9 && item.time <= 30
             ? 'from 10 to 30 hours'
             : item.time > 30 && item.time < 100
               ? 'from 30 to 100 hours'
               : '';
       } else {
         translatedSize = getTranslatedSize(item.size, 'uk'); // Translate size to Ukrainian
-        translatedTimeText = item.time === 5
+        translatedTimeText = item.time < 10
           ? '5 годин'
-          : item.time > 10 && item.time <= 30
+          : item.time > 9 && item.time <= 30
             ? 'від 10 до 30 годин'
             : item.time > 30 && item.time < 100
               ? 'від 30 до 100 годин'
@@ -297,7 +297,7 @@ const viewportWidth = window.innerWidth;
               )}
             </div>
             <div className='sectionca'>
-              <span className='text-12ca'>{item.price} </span>
+              <span className='text-12ca'>{item.price * item.quantity} </span>
               <span className='text-13ca'>{getCurrency()}</span>
             </div>
             {viewportWidth > 1200 ? (
@@ -318,9 +318,9 @@ const viewportWidth = window.innerWidth;
             <span className={`text-14ca text-14ca-${index + 1}`}>{item.aroma}</span>
             <span className={`text-15ca text-15ca-${index + 1}`}>{item.size}</span>
            
-            <span className={`text-17ca text-17ca-${index + 1}`}>{item.time === 5
+            <span className={`text-17ca text-17ca-${index + 1}`}>{item.time < 10
                       ? '5 годин'
-                      : item.time > 10 && item.time <= 30
+                      : item.time > 9 && item.time <= 30
                         ? 'від 10 до 30 годин'
                         : item.time > 30 && item.time < 100
                           ? 'від 30 до 100 годин'

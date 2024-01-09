@@ -178,7 +178,7 @@
 }
 
 .text-811ca {
-  display: block;
+  display: flex;
   position: relative;
   width: 600px;
   height: auto;
@@ -396,7 +396,7 @@
   justify-content: flex-start;
   position: absolute;
   width: 160px;
-  top: 37.5%;
+  top: 45.5%;
   left: 180px;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
@@ -518,7 +518,7 @@
   justify-content: flex-start;
   position: absolute;
   height: 16.3%;
-  top: 37.5%;
+  top: 35.5%;
   left: 500px;
   width: 30px;
   margin-top: 20px;
@@ -541,7 +541,7 @@
   justify-content: flex-start;
   position: absolute;
   height: 16.3%;
-  top: 44.02%;
+  top: 35.5%; 
   left: 660px;
   margin-top: 20px;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
@@ -1145,7 +1145,7 @@
   justify-content: center;
   width: 373px;
   height: 70px;
-  margin: 105px 0 60px 442px;
+  margin: 105px 0 60px 0px;
   background: #694f42;
   z-index: 63;
   border-radius: 10px;
