@@ -17,7 +17,7 @@ export default function Card({ id, name, description, price, discount, img }) {
         {discount !== 0 && <span className='textc'>sale</span>}
         <div className='group-2c'>
          {img && img.length > 0 && (
-          <img className='picc' src={`http://localhost:3000/photo/${img[0].img}`} alt={name} />
+          <img className='picc' src={`http://chbliss50457.corsa.chost.com.ua/photo/${img[0].img}`} alt={name} />
         )}
         </div>
       </div>

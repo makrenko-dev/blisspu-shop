@@ -20,7 +20,7 @@ const discountedPrice = price - (price * (discount / 100));
       <div className='groupc'>
         <img 
           className='picc_a'
-          src={`http://localhost:3000/photo/${image}`} 
+          src={`http://chbliss50457.corsa.chost.com.ua/photo/${image}`} 
           alt={name}   
           onError={(e) => {console.error('Error loading image:', e);
           e.target.src = fallbackImage;}}

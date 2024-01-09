@@ -42,7 +42,7 @@ function Special() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/product/forclient');
+        const response = await fetch('http://chbliss50457.corsa.chost.com.ua/api/product/forclient');
         const data = await response.json();
         setSpecialProducts(data);
       } catch (error) {

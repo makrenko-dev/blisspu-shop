@@ -12,7 +12,7 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
     setCity(selectedCity);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/order/warehouses?writecity=${encodeURIComponent(selectedCity)}`, {
+      const response = await fetch(`http://chbliss50457.corsa.chost.com.ua/api/order/warehouses?writecity=${encodeURIComponent(selectedCity)}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
 
   const fetchFilteredBranches = async (city, inputValue) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/order/warehouses?writecity=${encodeURIComponent(city)}&selecthouse=${encodeURIComponent(inputValue)}`, {
+      const response = await fetch(`http://chbliss50457.corsa.chost.com.ua/api/order/warehouses?writecity=${encodeURIComponent(city)}&selecthouse=${encodeURIComponent(inputValue)}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
     <div>
       <CustomSelect 
         label='*Ваше місто'
-        endpoint='http://localhost:3000/api/order/selectcity'
+        endpoint='http://chbliss50457.corsa.chost.com.ua/api/order/selectcity'
         onChange={handleCityChange}
       />
       {city && (
@@ -110,7 +110,6 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
             setSelectedBranch(selectedOption);
               Promise.resolve().then(() => {
           onSelectCityAndHouse(city, selectedOption.value);
-          console.log('city', city, 'house', selectedOption.value);
         });
 
           }}

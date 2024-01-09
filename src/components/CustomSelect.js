@@ -11,7 +11,7 @@ const CustomSelect = ({ onChange }) => {
 
     if (input.length > 0) {
       try {
-        const response = await fetch(`http://localhost:3000/api/order/selectcity?writecity=${encodeURIComponent(input)}`, {
+        const response = await fetch(`http://chbliss50457.corsa.chost.com.ua/api/order/selectcity?writecity=${encodeURIComponent(input)}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

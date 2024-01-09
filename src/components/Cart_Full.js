@@ -265,7 +265,7 @@ const viewportWidth = window.innerWidth;
             {/* Render individual item properties here */}
             <div className='wrapper-2ca'>
               <img className='bg-img'
-              src={`http://localhost:3000/photo/${item.img[0].img}`} 
+              src={`http://chbliss50457.corsa.chost.com.ua/photo/${item.img[0].img}`} 
               alt={item.name}   
               onError={(e) => {
               e.target.src = fallbackImage;}}

@@ -118,7 +118,7 @@ if (deliveryMethod === 'novaPoshta') {
   // Make API call
   try {
 
-    const response = await fetch('http://localhost:3000/api/order/createorder', {
+    const response = await fetch('http://chbliss50457.corsa.chost.com.ua/api/order/createorder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
