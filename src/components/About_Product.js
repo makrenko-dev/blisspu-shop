@@ -495,6 +495,7 @@ if (productData) {
                 name={similarProduct.name}
                 description={similarProduct.mini_desc}
                 price={similarProduct.price}
+                discount={similarProduct.discount}
                 image={similarProduct.img && similarProduct.img[0].img}
               />
         ))}
