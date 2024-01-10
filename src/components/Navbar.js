@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useState } from 'react';
 import BootstrapNavbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Offcanvas from 'react-bootstrap/Offcanvas';
@@ -14,6 +15,7 @@ export default function Navbar() {
   const { isCartOpen, toggleCart, updateCart } = useCart();
   const { handleLanguageChange } = useLanguage();
   const { targetLanguage } = useLanguage();
+   const [textColor, setTextColor] = useState('black');
 
   const textElements = [
     { className: 'text-5', originalText: 'Головна' },
@@ -101,13 +103,19 @@ export default function Navbar() {
           </Nav.Link>
             <Nav className="ml-auto language-links">
               <Nav.Link style={{ cursor: 'pointer' }} onClick={() => handleLanguageChange('en')}>
-                <span className='text-7'>En</span>
+              {targetLanguage === 'en'
+              ? <span style={{color:'white'}}className='text-7'>En</span>
+              : <span style={{color:'silver'}}className='text-7'>En</span>
+              }
               </Nav.Link>
               <Nav.Link>
                 <span className='text-5'>|</span>
               </Nav.Link>
               <Nav.Link style={{ cursor: 'pointer' }} onClick={() => handleLanguageChange('uk')}>
-                <span className='text-8'>Uk</span>
+              {targetLanguage === 'uk'
+              ? <span style={{color:'white'}}className='text-8'>Uk</span>
+              : <span style={{color:'silver'}}className='text-8'>Uk</span>
+              }
               </Nav.Link>
            </Nav>
             <Nav.Link style={{ cursor: 'pointer' }} onClick={handleCartClick}>
