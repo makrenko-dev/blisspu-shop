@@ -297,7 +297,7 @@ const viewportWidth = window.innerWidth;
               )}
             </div>
             <div className='sectionca'>
-              <span className='text-12ca'>{item.price * item.quantity} </span>
+              <span className='text-12ca'>{(item.price * item.quantity).toFixed(2)} </span>
               <span className='text-13ca'>{getCurrency()}</span>
             </div>
             {viewportWidth > 1200 ? (

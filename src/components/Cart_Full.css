@@ -9,6 +9,8 @@
 
 .main-containerca {
   position: relative;
+  display: flex;
+  flex-direction: column;
   height: auto;
   min-height: 60vh;
   margin: 50px 0px 50px 70px;
@@ -1141,7 +1143,8 @@
 }
 .group-6ca {
   position: relative;
-  display: inline-flex;
+  display: flex;
+  align-self: center;
   justify-content: center;
   width: 373px;
   height: 70px;

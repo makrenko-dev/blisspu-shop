@@ -186,7 +186,7 @@ useEffect(() => {
                   }
                   </p>
                   <p className={`p124 p124-${index + 1}`} style={{marginBottom:'0px',fontSize:'16px'}}>- {item.colors.map((colorObj) => colorObj.color).join(', ')}</p>
-                  <p style={{ marginBottom: '0px', fontSize: '20px' }}>{item.price} {getCurrency()}</p>
+                  <p style={{ marginBottom: '0px', fontSize: '20px' }}>{(item.price * item.quantity).toFixed(2)} {getCurrency()}</p>
                 </div>
               </div>
             </div>

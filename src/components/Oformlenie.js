@@ -453,7 +453,7 @@ const handlePayButtonClick = async () => {
                 <span className='text-b'>{item.quantity}x {item.name}</span>
                 <span className='text-c'>{`${targetLanguage === 'en'
         ? 'Price'
-        : 'Ціна'}: ${item.price} ${targetLanguage === 'en'
+        : 'Ціна'}: ${item.price.toFixed(2)} ${targetLanguage === 'en'
         ? 'uah'
         : 'грн'}`}</span>
                 <hr className='custom-hr'/>

@@ -320,6 +320,12 @@ const addToCart = () => {
     }
 
     if (productData && selectedColors.length > 0) {
+      const isNewProduct = !cart.some(
+        (item) =>
+          item.id === productData.id &&
+          item.colors.some((color) => color.color_num === selectedColors[0]?.color_num)
+      );
+
       updateCart((prevCart) => {
         const existingProductIndex = prevCart.findIndex(
           (item) =>
@@ -341,15 +347,17 @@ const addToCart = () => {
             quantity,
             colors: [{ color: selectedColors[0]?.color, color_num: selectedColors[0]?.color_num }],
           };
-          toggleCart(); // Close the cart before updating
           return [...prevCart, newCartItem];
         }
       });
+
+      toggleCart(); // Open the cart
     }
   } catch (error) {
     console.error('Error adding to cart:', error);
   }
 };
+
 
 
 const getSimilarColorProducts = () => {
