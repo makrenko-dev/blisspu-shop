@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import CustomSelect from './CustomSelect';
-import Select from 'react-select';
+import Select, { components } from 'react-select';
 
 const NovaPoshta = ({ onSelectCityAndHouse }) => {
   const [city, setCity] = useState(null);
   const [branches, setBranches] = useState([]);
   const [selectedBranch, setSelectedBranch] = useState(null);
   const [optionsLoaded, setOptionsLoaded] = useState(false);
-
+  
+  const CustomClearIndicator = (props) => {
+    return <div />; // Empty div to hide the clear indicator
+  };
   const handleCityChange = async (selectedCity) => {
     setCity(selectedCity);
 
@@ -102,17 +105,17 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
       />
       {city && (
         <div style={{ marginTop: '20px' }}>
+          <label htmlFor="branchesSelect">*Номер відділення\поштамату</label>
           <Select
-            label='*Номер відділення\поштамату'
+            id="branchesSelect"
             options={optionsLoaded ? branches : []}
             value={optionsLoaded ? selectedBranch : null}
             onChange={(selectedOption) => {
-            setSelectedBranch(selectedOption);
+              setSelectedBranch(selectedOption);
               Promise.resolve().then(() => {
-          onSelectCityAndHouse(city, selectedOption.value);
-        });
-
-          }}
+                onSelectCityAndHouse(city, selectedOption.value);
+              });
+            }}
             onInputChange={(inputValue) => {
               if (optionsLoaded) {
                 handleBranchChange(inputValue);
@@ -120,6 +123,7 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
             }}
             isClearable
             styles={{ menu: (provided) => ({ ...provided, zIndex: 9999 }) }}
+            components={{ ClearIndicator: CustomClearIndicator }}
           />
         </div>
       )}

@@ -68,6 +68,7 @@ const CustomSelect = ({ onChange }) => {
 
   return (
     <div>
+     <label htmlFor="branchesSelect" >*Введіть ваше місто</label>
       <Select
         inputValue={inputValue}
         onInputChange={handleInputChangeFromField}
@@ -77,7 +78,16 @@ const CustomSelect = ({ onChange }) => {
         onMenuClose={handleMenuClose}
         isClearable
         menuIsOpen={inputValue.length > 0}
-        styles={{ menu: (provided) => ({ ...provided, zIndex: 9999 }) }}
+        styles={{
+          control: (provided) => ({
+            ...provided,
+            width: 'auto', minWidth: '300px', // Set the desired width here
+          }),
+          menu: (provided) => ({
+            ...provided,
+            zIndex: 9999,
+          }),
+        }}
       />
     </div>
   );

@@ -440,6 +440,7 @@ if (productData) {
               ? '*Час горіння свічки приблизно від 30 до 100 годин'
               : ''}
           </span>
+          <span className='text-a761'>Розмір свічки: {productData.size}</span>
           <span className='text-b76'>Колір</span>
           <div className='colors-container'>
             

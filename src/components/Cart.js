@@ -196,7 +196,9 @@ useEffect(() => {
 
         <div>
           <button  className='section111' >
-            <Link to="/cart" className='text-131' style={{ textDecoration: 'none'}}>Перейти до кошика</Link>
+            <Link to="/cart" className='text-131' style={{ textDecoration: 'none' }} onClick={handleClose}>
+              Перейти до кошика
+            </Link>
             <div className='img111' />
           </button >
         </div>

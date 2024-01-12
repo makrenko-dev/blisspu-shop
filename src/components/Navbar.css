@@ -146,7 +146,7 @@
 }
 
 @media (max-width: 991px) {
-  .justify-content-between.navbar.navbar-expand-lg.navbar-light {
+  .justify-content-between.navbar.navbar-expand-lg.navbar-dark {
     font-size: 24px; /* Adjust the font size as needed */
     padding: 50px; /* Adjust the padding as needed */
   }
@@ -154,6 +154,7 @@
     flex-direction: column; /* Change flex direction to column */
     align-items: flex-start; /* Align items to the start of the column */
     width: 100%; /* Make the collapsed Navbar take up the full width */
+    margin-top: 50px;
   }
 
   .navbar-nav .nav-link {
@@ -177,5 +178,23 @@
 .navbar-brand{
     margin-left: 0vw;
     width: auto;
+
+}
+.text{
+  font-size: 80px;
+  
+}
+.navbar-collapse.collapse.show{
+  margin-top: 50px;
+}
+
+.navbar-toggler-icon{
+  width: 50px!important;
+   height: 50px!important;
+   color: white;
+}
+.navbar-collapse.collapse
+{
+  margin-top: 50px;
 }
 }

@@ -36,13 +36,13 @@ const ProductDetails = ({ targetLanguage }) => {
       if (targetLanguage === 'en') {
         textDcaElement.style.left = `${currentTextDcaLeft + 50}px`;
         textCcaElement.style.left = `${currentTextCcaLeft + 40}px`;
-        textAcaElement.style.left = `${currentTextAcaLeft + 30}px`;
+        textAcaElement.style.left = `${currentTextAcaLeft + 10}px`;
         textBcaElement.style.left = `${currentTextBcaLeft + 30}px`;
         textEcaElement.style.left = `${currentTextEcaLeft + 30}px`;
       } else if (targetLanguage === 'uk') {
         textDcaElement.style.left = `${currentTextDcaLeft - 50}px`;
         textCcaElement.style.left = `${currentTextCcaLeft - 40}px`;
-        textAcaElement.style.left = `${currentTextAcaLeft - 30}px`;
+        textAcaElement.style.left = `${currentTextAcaLeft - 10}px`;
         textBcaElement.style.left = `${currentTextBcaLeft - 30}px`;
         textEcaElement.style.left = `${currentTextEcaLeft - 30}px`;
       }
@@ -70,7 +70,6 @@ export default function Cart_Full({ cartItems } ) {
     { className: 'text-9ca', originalText: 'Продукт' },
     { className: 'text-aca', originalText: 'Колір' },
     { className: 'text-bca', originalText: 'Аромат' },
-    { className: 'text-cca', originalText: 'Розмір' },
     { className: 'text-dca', originalText: 'Кіл-ть' },
     { className: 'text-eca', originalText: 'Ціна' },
     { className: 'text-2aca', originalText: 'Оформити замовлення' },
@@ -78,20 +77,6 @@ export default function Cart_Full({ cartItems } ) {
   ];
 
 useEffect(() => {
-  const getTranslatedSize = (originalSize, language) => {
-    const sizeMapping = {
-      велика: { en: 'big', uk: 'велика' },
-      середня: { en: 'medium', uk: 'середня' },
-      маленька: { en: 'small', uk: 'маленька' },
-      // Add more size mappings as needed
-    };
-
-    // Choose the appropriate translation based on the original size text
-    const sizeKey = originalSize.toLowerCase();
-    const translatedSize = sizeMapping[sizeKey] && sizeMapping[sizeKey][language];
-
-    return translatedSize || originalSize; // Return the translated size if available, otherwise, return the original size
-  };
 
   const updateButtonWidth = () => {
   const buttonTextElement = document.querySelector('.text-2aca');
@@ -150,18 +135,17 @@ const translateColors = async (colors, targetLanguage) => {
      if (cart.length > 0) {
     const cartTranslationPromises = cart.map(async (item, index) => {
     const aromaElement = document.querySelector(`.text-14ca-${index + 1}`);
-    const sizeElement = document.querySelector(`.text-15ca-${index + 1}`);
+   
     const timeElement = document.querySelector(`.text-17ca-${index + 1}`);
     const colorElements = document.querySelectorAll(`.text-19ca-${index + 1}`);
 
-    if (aromaElement && sizeElement && timeElement) {
+    if (aromaElement && timeElement) {
       let translatedName = item.aroma;
-      let translatedSize = getTranslatedSize(item.size, targetLanguage);
+     
       let translatedTimeText = '';
 
       if (targetLanguage === 'en') {
         translatedName = await translateText(item.aroma, 'en');
-        translatedSize = getTranslatedSize(item.size, 'en'); // Translate size to English
         translatedTimeText = item.time < 10
           ? '5 hours'
           : item.time > 9 && item.time <= 30
@@ -170,7 +154,6 @@ const translateColors = async (colors, targetLanguage) => {
               ? 'from 30 to 100 hours'
               : '';
       } else {
-        translatedSize = getTranslatedSize(item.size, 'uk'); // Translate size to Ukrainian
         translatedTimeText = item.time < 10
           ? '5 годин'
           : item.time > 9 && item.time <= 30
@@ -187,10 +170,8 @@ const translateColors = async (colors, targetLanguage) => {
             });
       return {
         aromaElement,
-        sizeElement,
         timeElement,
         translatedName,
-        translatedSize,
         translatedTimeText,
         
       };
@@ -202,10 +183,9 @@ const translateColors = async (colors, targetLanguage) => {
   const cartTranslations = await Promise.all(cartTranslationPromises);
 
   // Update cart item text content after all translations are done
-  cartTranslations.forEach(({ aromaElement, sizeElement, timeElement, translatedName, translatedSize, translatedTimeText }) => {
-    if (aromaElement && sizeElement && timeElement) {
+  cartTranslations.forEach(({ aromaElement, timeElement, translatedName, translatedTimeText }) => {
+    if (aromaElement && timeElement) {
       aromaElement.textContent = ` ${translatedName}`;
-      sizeElement.textContent = ` ${translatedSize}`;
       timeElement.textContent = ` ${translatedTimeText}`;
     }
   });
@@ -255,7 +235,6 @@ const viewportWidth = window.innerWidth;
         <span className='text-9ca'>Продукт</span>
         <span className='text-aca'>Колір</span>
         <span className='text-bca'>Аромат</span>
-        <span className='text-cca'>Розмір</span>
         <span className='text-dca'>Кіл-ть</span>
         <span className='text-eca'>Ціна</span>
       </div>
@@ -316,7 +295,6 @@ const viewportWidth = window.innerWidth;
               ))
             )}
             <span className={`text-14ca text-14ca-${index + 1}`}>{item.aroma}</span>
-            <span className={`text-15ca text-15ca-${index + 1}`}>{item.size}</span>
            
             <span className={`text-17ca text-17ca-${index + 1}`}>{item.time < 10
                       ? '5 годин'

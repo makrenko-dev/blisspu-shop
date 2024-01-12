@@ -176,8 +176,8 @@
 }
 .wrapper-276 {
   position: absolute;
-  width: 450px;
-  height: 680px;
+  width: 470px;
+  height: 650px;
   top: 0;
   left: 0;
   background: #ffffff;
@@ -278,7 +278,27 @@
 .text-a76 {
   position: relative;
   display: block;
-  margin-top: 64px;
+  margin-top: 44px;
+  width: 545px;
+  height: auto;
+  left: 550px;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  letter-spacing: 1px;
+  z-index: 7;
+}
+
+.text-a761 {
+  position: relative;
+  display: block;
+  margin-top: 24px;
   width: 545px;
   height: auto;
   left: 550px;
@@ -297,7 +317,7 @@
 .text-b76 {
   position: relative;
   display: block;
-  margin-top: 20px;
+  margin-top: 30px;
   height: auto;
   left: 550px;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
@@ -904,7 +924,7 @@
    .wrapper-276 {
     position: relative;
     width: 420px!important;
-    height: 510px!important;
+    height: 580px!important;
     top: 0;
     left: 0;
     background: #ffffff;
@@ -1012,10 +1032,30 @@
   letter-spacing: 1px;
   z-index: 7;
 }
-.text-b76 {
+
+.text-a761 {
   position: relative;
   display: block;
   margin-top: 20px;
+ width: 400px;
+  height: auto;
+  left: 60px;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  letter-spacing: 1px;
+  z-index: 7;
+}
+.text-b76 {
+  position: relative;
+  display: block;
+  margin-top: 30px;
    width: 400px;
   height: auto;
   left: 60px;
@@ -1340,10 +1380,29 @@
   letter-spacing: 1px;
   z-index: 7;
 }
-.text-b76 {
+.text-a761 {
   position: relative;
   display: block;
   margin-top: 20px;
+ width: 700px;
+  height: auto;
+  left: 0px;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  letter-spacing: 1px;
+  z-index: 7;
+}
+.text-b76 {
+  position: relative;
+  display: block;
+  margin-top: 40px;
    width: 700px;
   height: auto;
   left: 0px;

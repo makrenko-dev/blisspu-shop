@@ -7,10 +7,11 @@ import Modal from './Modal';
 import translateText from './translateText';
 import { useLanguage } from './LanguageContext';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Oformlenie() {
-
+   const navigate = useNavigate();
    const [deliveryMethod, setDeliveryMethod] = useState('');
   const [city, setCity] = useState('');
    const [selectedCity, setSelectedCity] = useState(''); // Added selectedCity state
@@ -25,9 +26,13 @@ export default function Oformlenie() {
     setDeliveryMethod(event.target.value);
   };
  const { cart, clearCart } = useCart();
- const openModal = () => {
-    setIsModalOpen(true);
-  };
+ const [orderNumber, setOrderNumber] = useState('');
+
+const openModal = (orderNumber) => {
+  console.log('Oformlenie', orderNumber);
+  setIsModalOpen(true);
+  setOrderNumber(orderNumber);
+};
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -74,14 +79,39 @@ useEffect(() => {
 
 
   let requestData;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const phoneRegex = /^\+380\d{9}$/;
 
-if (!firstName || !lastName || !email || !phoneNumber || !deliveryMethod || !paymentMethod || cartData.length === 0) {
+if (!firstName || !lastName || !email || !phoneNumber || !deliveryMethod || !paymentMethod) {
   // If any required field is empty, display an error message
   alert(targetLanguage === 'en'
     ? 'Please fill in all required fields'
     : 'Будь-ласка, заповніть всі необхідні поля');
   return;
 }
+if(cartData.length === 0){
+  alert(targetLanguage === 'en'
+    ? 'Your cart is empty'
+    : 'Ваша корзина пуста');
+  return;
+}
+
+if (!emailRegex.test(email)) {
+  // If the email is not in a valid format, display an error message
+  alert(targetLanguage === 'en'
+    ? 'Please enter a valid email address'
+    : 'Будь-ласка, введіть коректну електронну адресу');
+  return;
+}
+
+if (!phoneRegex.test(phoneNumber)) {
+  // If the phone number is not in a valid format, display an error message
+  alert(targetLanguage === 'en'
+    ? 'Please enter a valid phone number'
+    : 'Будь-ласка, введіть коректний номер телефону');
+  return;
+}
+
 
 if (deliveryMethod === 'novaPoshta') {
   if (selectedCity === '' || selectedHouse === '') {
@@ -125,12 +155,20 @@ if (deliveryMethod === 'novaPoshta') {
       },
       body: JSON.stringify(requestData),
     });
-    
+  
     if (response.ok) {
       // Handle successful response, e.g., redirect to a success page
 
-      openModal();
+   const responseData = await response.text();
+    console.log('first', responseData);
+
+    if (responseData) {
+      openModal(responseData);
       clearCart();
+    } else {
+      console.error('Error: Response data is undefined or empty.');
+    }
+    
     } else {
       // Handle error response
       throw new Error(response.message);
@@ -239,12 +277,22 @@ const handlePayButtonClick = async () => {
         : '*Прізвище'} />
           </div>
           <div className='form-row'>
-            <input type='email' name='email' className='text-input' placeholder={targetLanguage === 'en'
-        ? '*Email'
-        : '*Електрона адреса'} />
-            <input type='text' name='phoneNumber' className='text-input' placeholder={targetLanguage === 'en'
-        ? '*Phone number'
-        : '*Номер телефону'} />
+            <input
+              type='email'
+              name='email'
+              className='text-input'
+              placeholder={targetLanguage === 'en' ? '*Email' : '*Електрона адреса'}
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              title={targetLanguage === 'en' ? 'Enter a valid email address' : 'Введіть коректну електронну адресу'}
+            />
+           <input
+              type='text'
+              name='phoneNumber'
+              className='text-input'
+              placeholder={targetLanguage === 'en' ? '*Phone number' : '*Номер телефону'}
+              pattern="^\+?[0-9\s-]*$"
+              title={targetLanguage === 'en' ? 'Enter a valid phone number' : 'Введіть коректний номер телефону'}
+            />
           </div>
         
         <div className='form-zag'>
@@ -438,11 +486,11 @@ const handlePayButtonClick = async () => {
         <span className='text-26o'>
         {targetLanguage === 'en'
         ? '*Please indicate "Candles" in the comments during payment, and send a screenshot of the payment to our Instagram to confirm the order'
-        : '*Будь ласка, вказуйте під час оплати в коментарях "Свічки", та скріншот оплати відправляйте у наш інстаграм, для підтвердження замовлення'}
+        : '*Будь ласка, вказуйте під час оплати в призначенні платежу "Свічки", та скріншот оплати відправляйте у наш інстаграм, для підтвердження замовлення'}
           
         </span>      
       </form>
-       {isModalOpen && <Modal onClose={closeModal} />}
+       {isModalOpen && <Modal onClose={closeModal} orderNumber={orderNumber} />}
       </div>
         <div className='boxo'>
           <span className='text-ao'>{targetLanguage === 'en'

@@ -77,7 +77,7 @@ export default function Navbar() {
   };
 
    return (
-    <BootstrapNavbar expand="lg" variant="light" style={{ background: 'rgb(105, 79, 66)' }} className="justify-content-between" >
+    <BootstrapNavbar expand="lg" variant="dark" style={{ background: 'rgb(105, 79, 66)' }} className="justify-content-between " >
       <BootstrapNavbar.Brand>
         <Link to="/" style={{ textDecoration: 'none', marginLeft: '80px' }}>
           <span className='text'>BLISSPU</span>
