@@ -27,6 +27,9 @@ export default function Oformlenie() {
   };
  const { cart, clearCart } = useCart();
  const [orderNumber, setOrderNumber] = useState('');
+ const [emailValid, setEmailValid] = useState(true);
+const [phoneNumberValid, setPhoneNumberValid] = useState(true);
+const [formValid, setFormValid] = useState(true);
 
 const openModal = (orderNumber) => {
   console.log('Oformlenie', orderNumber);
@@ -82,13 +85,40 @@ useEffect(() => {
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const phoneRegex = /^\+380\d{9}$/;
 
+removeInvalidField('firstName');
+removeInvalidField('lastName');
+removeInvalidField('email');
+removeInvalidField('phoneNumber');
+removeInvalidField('deliveryMethod');
+removeInvalidField('paymentMethod');
+
+// Check if any required field is empty
 if (!firstName || !lastName || !email || !phoneNumber || !deliveryMethod || !paymentMethod) {
-  // If any required field is empty, display an error message
-  alert(targetLanguage === 'en'
-    ? 'Please fill in all required fields'
-    : 'Будь-ласка, заповніть всі необхідні поля');
+  // Highlight empty fields in red
+  if (!firstName) {
+    highlightInvalidField('firstName');
+  }
+  if (!lastName) {
+    highlightInvalidField('lastName');
+  }
+  if (!email) {
+    highlightInvalidField('email');
+  }
+  if (!phoneNumber) {
+    highlightInvalidField('phoneNumber');
+  }
+  if (!deliveryMethod) {
+    // Highlight the delivery method section in red (if applicable)
+    highlightInvalidField('deliveryMethod');
+  }
+  if (!paymentMethod) {
+    highlightInvalidField('paymentMethod');
+  }
+
   return;
 }
+
+
 if(cartData.length === 0){
   alert(targetLanguage === 'en'
     ? 'Your cart is empty'
@@ -96,21 +126,28 @@ if(cartData.length === 0){
   return;
 }
 
-if (!emailRegex.test(email)) {
-  // If the email is not in a valid format, display an error message
-  alert(targetLanguage === 'en'
-    ? 'Please enter a valid email address'
-    : 'Будь-ласка, введіть коректну електронну адресу');
-  return;
+ 
+const isEmailValid = emailRegex.test(email);
+setEmailValid(isEmailValid);
+if (isEmailValid) {
+  removeInvalidField('email');
 }
 
-if (!phoneRegex.test(phoneNumber)) {
-  // If the phone number is not in a valid format, display an error message
-  alert(targetLanguage === 'en'
-    ? 'Please enter a valid phone number'
-    : 'Будь-ласка, введіть коректний номер телефону');
-  return;
+// Phone number validation
+const isPhoneValid = phoneRegex.test(phoneNumber);
+setPhoneNumberValid(isPhoneValid);
+if (isPhoneValid) {
+  removeInvalidField('phoneNumber');
 }
+
+// Check if either email or phone number is invalid
+if (!isEmailValid || !isPhoneValid) {
+  setFormValid(false);
+  return; // Exit early if form is invalid
+} else {
+  setFormValid(true);
+}
+
 
 
 if (deliveryMethod === 'novaPoshta') {
@@ -179,6 +216,19 @@ if (deliveryMethod === 'novaPoshta') {
   };
 };
 
+const highlightInvalidField = (fieldName) => {
+  const inputField = formRef.current.querySelector(`[name=${fieldName}]`);
+  if (inputField) {
+    inputField.classList.add('invalid-field');
+  }
+};
+
+const removeInvalidField = (fieldName) => {
+  const inputField = formRef.current.querySelector(`[name=${fieldName}]`);
+  if (inputField) {
+    inputField.classList.remove('invalid-field');
+  }
+};
 
   const TextInput = ({ label, value, onChange }) => (
     <div className='text-input'>
@@ -280,18 +330,26 @@ const handlePayButtonClick = async () => {
             <input
               type='email'
               name='email'
-              className='text-input'
+              className={`text-input ${!emailValid ? 'invalid-field' : ''}`}
               placeholder={targetLanguage === 'en' ? '*Email' : '*Електрона адреса'}
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
               title={targetLanguage === 'en' ? 'Enter a valid email address' : 'Введіть коректну електронну адресу'}
+              onChange={(e) => {
+                setEmailValid(true);
+                
+              }}
             />
            <input
               type='text'
               name='phoneNumber'
-              className='text-input'
+              className={`text-input ${!phoneNumberValid ? 'invalid-field' : ''}`}
               placeholder={targetLanguage === 'en' ? '*Phone number' : '*Номер телефону'}
               pattern="^\+?[0-9\s-]*$"
               title={targetLanguage === 'en' ? 'Enter a valid phone number' : 'Введіть коректний номер телефону'}
+              onChange={(e) => {
+                setPhoneNumberValid(true);
+                
+              }}
             />
           </div>
         
@@ -344,6 +402,7 @@ const handlePayButtonClick = async () => {
           </>
         ) : (
          viewportWidth  > 1200 ? (
+
           <div className='form-row1'>
             <input
               type='radio'
@@ -373,7 +432,8 @@ const handlePayButtonClick = async () => {
             </label>
           </div>
           ):(
-           <div className='form-row1'>
+          <>
+          <div className='form-row1'>
             <input
               type='radio'
               id='novaPoshta'
@@ -387,6 +447,8 @@ const handlePayButtonClick = async () => {
                 ? 'Delivering by Nova Poshta'
                 : 'Доставка новою поштою'}
             </label>
+          </div>
+          <div className='form-row1'>
             <input
               type='radio'
               id='cityDelivery'
@@ -401,6 +463,7 @@ const handlePayButtonClick = async () => {
                 : 'Доставка по місту'}
             </label>
           </div>
+          </>
           )
         )}
 
@@ -483,12 +546,29 @@ const handlePayButtonClick = async () => {
           )}
 
       
-        <span className='text-26o'>
-        {targetLanguage === 'en'
-        ? '*Please indicate "Candles" in the comments during payment, and send a screenshot of the payment to our Instagram to confirm the order'
-        : '*Будь ласка, вказуйте під час оплати в призначенні платежу "Свічки", та скріншот оплати відправляйте у наш інстаграм, для підтвердження замовлення'}
-          
-        </span>      
+   <span className='text-26o'>
+      {targetLanguage === 'en' ? (
+        '*Please indicate "Candles" in the comments during payment, and send a screenshot of the payment to our Instagram to confirm the order'
+      ) : (
+        <>
+        Реквізити для оплати
+        <br />
+        <br />
+          ТОВ БЛІСПУ
+           <br />
+          45194677
+           <br />
+          UA753052990000026007050572379
+           <br />
+          АТ КБ "ПРИВАТБАНК"
+          <br />
+          Призначення: оплата за товар
+          <br />
+          <br />
+          Будь ласка, вказуйте під час оплати в призначенні платежу "оплата за товар", та скріншот оплати відправляйте у наш інстаграм, для підтвердження замовлення
+        </>
+      )}
+    </span>    
       </form>
        {isModalOpen && <Modal onClose={closeModal} orderNumber={orderNumber} />}
       </div>

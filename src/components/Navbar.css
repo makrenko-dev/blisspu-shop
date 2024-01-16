@@ -134,7 +134,7 @@
   top: 33%;
   margin-left: 10px;
   right: 5vw;
-  background: url(../assets/images/cart.png)
+  background: url(../assets/images/cart.svg)
     no-repeat center;
   background-size: 100% 100%;
 
@@ -170,7 +170,7 @@
   top: 0;
   margin-left: 0px;
   right: 0;
-  background: url(../assets/images/cart.png)
+  background: url(../assets/images/cart.svg)
     no-repeat center;
   background-size: 100% 100%;
 
