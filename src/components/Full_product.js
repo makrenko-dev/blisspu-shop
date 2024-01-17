@@ -147,7 +147,7 @@ const handleToggleSorting = () => {
     const queryString = queryParams.join('&');
     
     // Fetch data from the API with the constructed query string
-    fetch(`http://chbliss50457.corsa.chost.com.ua/api/product/forclient?${queryString}`)
+    fetch(`https://blisspu.com.ua/api/product/forclient?${queryString}`)
       .then(response => response.json())
       .then(data => {
         setProducts(data);

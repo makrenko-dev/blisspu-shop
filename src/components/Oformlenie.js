@@ -185,7 +185,7 @@ if (deliveryMethod === 'novaPoshta') {
   // Make API call
   try {
 
-    const response = await fetch('http://chbliss50457.corsa.chost.com.ua/api/order/createorder', {
+    const response = await fetch('https://blisspu.com.ua/api/order/createorder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

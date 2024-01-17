@@ -15,7 +15,7 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
     setCity(selectedCity);
 
     try {
-      const response = await fetch(`http://chbliss50457.corsa.chost.com.ua/api/order/warehouses?writecity=${encodeURIComponent(selectedCity)}`, {
+      const response = await fetch(`https://blisspu.com.ua/api/order/warehouses?writecity=${encodeURIComponent(selectedCity)}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
 
   const fetchFilteredBranches = async (city, inputValue) => {
     try {
-      const response = await fetch(`http://chbliss50457.corsa.chost.com.ua/api/order/warehouses?writecity=${encodeURIComponent(city)}&selecthouse=${encodeURIComponent(inputValue)}`, {
+      const response = await fetch(`https://blisspu.com.ua/api/order/warehouses?writecity=${encodeURIComponent(city)}&selecthouse=${encodeURIComponent(inputValue)}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const NovaPoshta = ({ onSelectCityAndHouse }) => {
     <div>
       <CustomSelect 
         label='*Ваше місто'
-        endpoint='http://chbliss50457.corsa.chost.com.ua/api/order/selectcity'
+        endpoint='https://blisspu.com.ua/api/order/selectcity'
         onChange={handleCityChange}
       />
       {city && (

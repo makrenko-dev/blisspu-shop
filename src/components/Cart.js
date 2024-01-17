@@ -107,7 +107,7 @@ useEffect(() => {
         quantity: quantity,
       }));
 
-      const response = await fetch('http://chbliss50457.corsa.chost.com.ua/api/product/basket', {
+      const response = await fetch('https://blisspu.com.ua/api/product/basket', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -164,7 +164,7 @@ useEffect(() => {
                 <div>
                   <img
                     className={`bg-img1 img-${index + 1}`}
-                    src={`http://chbliss50457.corsa.chost.com.ua/photo/${item.img[0].img}`}
+                    src={`https://blisspu.com.ua/photo/${item.img[0].img}`}
                     alt={item.name}
                     onError={(e) => {
                       e.target.src = fallbackImage;

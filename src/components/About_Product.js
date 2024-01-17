@@ -271,7 +271,7 @@ useEffect(() => {
 
   useEffect(() => {
     // Fetch data for the specific product
-    fetch(`http://chbliss50457.corsa.chost.com.ua/api/product/${id}`)
+    fetch(`https://blisspu.com.ua/api/product/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setProductData(data);
@@ -279,7 +279,7 @@ useEffect(() => {
       .catch((error) => console.error('Error fetching product data:', error));
 
     // Fetch all products
-    fetch(`http://chbliss50457.corsa.chost.com.ua/api/product/forclient`)
+    fetch(`https://blisspu.com.ua/api/product/forclient`)
       .then((response) => response.json())
       .then((data) => {
         setAllProducts(data);
@@ -410,7 +410,7 @@ if (productData) {
        <div className='wrapper-276'>
               {productData.img && (
                 <img className='img76'
-              src={`http://chbliss50457.corsa.chost.com.ua/photo/${productData.img[0].img}`}
+              src={`https://blisspu.com.ua/photo/${productData.img[0].img}`}
               alt={productData.name}   
               onError={(e) => {console.error('Error loading image:', e);
               e.target.src = fallbackImage;}}
