@@ -891,15 +891,15 @@
 .similar-products-container {
   display: flex;
   justify-content: center; /* Center the items horizontally */
-  gap: 16px; /* Adjust the gap according to your design */
-  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+  gap: 20px; /* Adjust the gap according to your design */
+  height: auto;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .main-container76 {
   position: relative;
   height: 100%;
-  margin: 50px 0px 50px 50px;
+  margin: 50px 50px 50px 50px;
 }
 .text-3c1{
   position: relative;
@@ -1247,6 +1247,26 @@
     margin: 50px 50px 50px 50px;
     align-items: center;
 }
+
+.text-1876 {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 44px;
+  margin: 100px 0 0 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: #000000;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.884px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 18;
+}
+
 .text-3c1{
   position: relative;
     margin-top: 35px;
@@ -1286,12 +1306,13 @@
   width: 700px;
   height: auto;
   left: 0px;
+  margin-bottom: 20px;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 43.884px;
   text-align: center;
@@ -1313,7 +1334,7 @@
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
@@ -1373,7 +1394,7 @@
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 28px;
   text-align: left;
@@ -1392,7 +1413,7 @@
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 28px;
   text-align: left;
@@ -1463,8 +1484,8 @@
 .box-676 {
   position: relative;
   display: flex;
-  width: 250px;
-  height: 53px;
+  width: 290px;
+  height: 55px;
   top: 0px;
   margin-left: 20px;
   left: 0px;
@@ -1487,7 +1508,7 @@
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 30px;
   text-align: left;
@@ -1558,9 +1579,9 @@
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 40px;
   text-align: justify-all;
   letter-spacing: 1px;
   z-index: 26;
@@ -1598,5 +1619,19 @@
   z-index: 4;
   align-self: flex-start;
 }
+.color-text {
+  display: none;
+}
+.color-square {
+  width: 50px; /* Adjust as needed for the size of the color square */
+  height: 50px; /* Adjust as needed for the size of the color square */
+  margin-right: 20px; /* Adjust as needed for spacing between color square and text */
+  border-radius: 2px;
+}
+
+.colors-container .color-item .color-square.selected {
+  border: 4px solid #694F42; /* Set the border color to your preference */
+}
+
 
 }

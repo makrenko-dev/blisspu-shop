@@ -279,6 +279,7 @@ const handleToggleSorting = () => {
               const newPriceValue = parseInt(e.target.value, 10);
               handlePriceRangeChange([newPriceValue, priceRange[1]]);
             }}
+
             onChange={() => {}}
           />
           <br />
@@ -392,12 +393,13 @@ const handleToggleSorting = () => {
               handlePriceRangeChange([newPriceValue, priceRange[1]]);
             }}
             onChange={() => {}}
+
           />
           <br />
-          <span style={{ fontSize: '18px', fontWeight: '400' }}>{priceRange[0]} {targetLanguage === 'en'
+          <span style={{fontSize: '20px', fontWeight: '400' }}>{priceRange[0]} {targetLanguage === 'en'
         ? 'uah'
         : 'грн'} - </span>
-          <span style={{ fontSize: '18px', fontWeight: '400' }}>{priceRange[1]} {targetLanguage === 'en'
+          <span style={{ fontSize: '20px', fontWeight: '400' }}>{priceRange[1]} {targetLanguage === 'en'
         ? 'uah'
         : 'грн'}</span>
         </div>

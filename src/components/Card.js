@@ -12,7 +12,7 @@ export default function Card({ id, name, description, price, discount, img }) {
   };
   return (
     <Link to={`/product/${id}`} className='main-containerc'>
-      <div className='groupc'>
+      <div className='groupcc'>
         <div className='imgc' />
         {discount !== 0 && <span className='textc'>sale</span>}
         <div className='group-2c'>
@@ -26,7 +26,7 @@ export default function Card({ id, name, description, price, discount, img }) {
       {discount !== 0 ? (
           <>
             <span className='text-4c11'>{`${discountedPrice.toFixed(2)} ${getCurrency()}`}</span>
-            <span className='text-3c11'>{`${price} грн`}</span>
+            <span className='text-3c111'>{`${price} грн`}</span>
           </>
         ) : (
           <span className='text-4c11'>{`${price} грн`}</span>

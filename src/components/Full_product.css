@@ -209,6 +209,44 @@
     min-height: 70vh;
     margin: 0px 50px 130px 50px;
   }
+
+  input[type="range"] {
+ 
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin-top:15px;
+      margin-bottom:25px;
+      border-radius: 30px;
+
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 20px; /* Высота полосы для браузеров, использующих вебкит-движок, таких как Chrome и Safari */
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: #EEE6D3 ;
+}
+
+input[type=range]::-webkit-slider-thumb {
+      background: rgb(155, 100, 78);
+      border: 1px solid black;
+      border-radius: 30px;
+      cursor: pointer;
+      width:30px;
+      height: 30px;
+      -webkit-appearance: none;
+      margin-top: -4px;
+    }
+
+
+input[type="range"]::-moz-range-track {
+  height: 20px; /* Высота полосы для Firefox */
+}
+
+input[type="range"]::-ms-track {
+  height: 20px; /* Высота полосы для Internet Explorer и Microsoft Edge */
+}
   .text-container2 {
     display: flex;
     flex-direction: column;

@@ -2241,7 +2241,7 @@ input[type='radio']:checked {
 
 .boxo {
   position: relative;
-  width: 600px;
+  width: 700px;
   height: auto;
   top: 60px;
   left: 0px; 
@@ -2529,7 +2529,7 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 43.884px;
   text-align: left;
@@ -2550,7 +2550,7 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 29px;
   text-align: left;
@@ -2571,7 +2571,7 @@ input[type='radio']:checked {
   flex-wrap: wrap;
   margin-bottom: 0px;
   margin-right: 0px;
-  width: 600px;
+  width: 700px;
 }
 
 .form-row1 {
@@ -2580,7 +2580,7 @@ input[type='radio']:checked {
   flex-wrap: wrap;
   margin-bottom: 30px;
   margin-right: 0px;
-  width: 600px;
+  width: 700px;
 }
 
 .form-zag {
@@ -2590,7 +2590,7 @@ input[type='radio']:checked {
   flex-direction: column;
   margin-bottom: 30px;
   margin-right: 0px;
-  width: 600px;
+  width: 700px;
 }
 
 .form-zag1 {
@@ -2598,15 +2598,15 @@ input[type='radio']:checked {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-right: 0px;
-  width: 600px;
+  width: 700px;
 }
 
 /* Style for text inputs */
 .text-input {
   position: relative;
-  width: 600px; /* Adjust width and margin as needed */
+  width: 700px; /* Adjust width and margin as needed */
   padding: 10px;
   margin-right: 20px;
   margin-bottom: 30px;
@@ -2616,7 +2616,7 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 22px;
   border: none;
@@ -2636,7 +2636,7 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 22px;
   border: none;
@@ -2653,14 +2653,14 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 22px;
 }
 
 input[type='radio'] {
-  width: 25px; /* Set the width to make it square */
-  height: 25px; /* Set the height to make it square */
+  width: 30px; /* Set the width to make it square */
+  height: 30px; /* Set the height to make it square */
   margin-right: 5px; /* Adjust as needed for spacing between radio button and text */
   appearance: none; /* Remove default styles */
   border-radius: 4px; /* Optional: Add rounded corners */
@@ -2763,16 +2763,17 @@ input[type='radio']:checked {
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
-  width: 600px;
+  width: 700px;
   height: auto;
   margin-bottom: 10px;
+  margin-top: 20px;
   left: 0;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 29px;
   text-align: left;
@@ -2785,7 +2786,7 @@ input[type='radio']:checked {
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
-  width: 600px;
+  width: 700px;
   height: auto;
   top: 0px;
   left: 0;
@@ -2794,9 +2795,9 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 30px;
   text-align: left;
   letter-spacing: 0.54px;
   z-index: 23;
@@ -2835,7 +2836,7 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 30px;
   text-align: left;
@@ -2857,7 +2858,7 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
@@ -2879,7 +2880,7 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
@@ -2893,14 +2894,14 @@ input[type='radio']:checked {
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
-  height: 3.59%;
+  height: auto;
   left: 0;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 29px;
   text-align: left;
@@ -2920,7 +2921,7 @@ input[type='radio']:checked {
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
   color: #000000;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 30px;
   text-align: left;
@@ -3018,7 +3019,7 @@ input[type='radio']:checked {
   position: relative;
   width: 600px;
   height: auto;
-  margin: 24.5px 0 0 0;
+  margin: 50px 0 0 0;
   font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
     "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",

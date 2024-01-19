@@ -14,12 +14,14 @@ import { Link } from 'react-router-dom';
 
 const fallbackImage = "/assets/images/as7_1.png";
 
-const About_Product = () => {
+const About_Product = ({ isAboutProductPage }) => {
 
   useEffect(() => {
     updateWrapperHeight();
     window.scrollTo(0, 0);
   }, []);
+
+  
   const { id } = useParams();
   const [productData, setProductData] = useState(null);
   const [activeTab, setActiveTab] = useState('description');
@@ -506,6 +508,7 @@ if (productData) {
                 price={similarProduct.price}
                 discount={similarProduct.discount}
                 image={similarProduct.img && similarProduct.img[0].img}
+                isAboutProductPage={isAboutProductPage}
               />
         ))}
           </div>

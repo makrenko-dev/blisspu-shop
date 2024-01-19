@@ -23,7 +23,7 @@ function App() {
             <Route path="/about" element={<About_full />} />
             <Route path="/all" element={<All_products />} />
             <Route path="/zakaz" element={<Oformlenie />} />
-            <Route path="/product/:id" element={<About_Product />} />
+            <Route path="/product/:id" element={<About_Product isAboutProductPage={true} />} />
             <Route path="/cart" element={<Cart_Full />} />
             <Route path="/help" element={<Help />} />
             <Route path="/contacts" element={<Footer />} />

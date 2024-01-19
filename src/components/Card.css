@@ -13,7 +13,7 @@
   height: 451px;
   margin: 0 auto;
 }
-.groupc {
+.groupcc {
   position: relative;
   width: 308px;
   height: 368px;
@@ -93,6 +93,27 @@
   margin: 10px 0 0 0;
   z-index: 4;
 }
+.text-3c111 {
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: Montserrat Alternates, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  color: rgb(155, 100, 78);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  z-index: 1;
+  text-decoration: line-through; /* добавляем перечеркивание */
+}
+
 .text-3c11 {
   position: absolute;
   display: inline-block;
@@ -113,6 +134,7 @@
   z-index: 1;
   text-decoration: line-through; /* добавляем перечеркивание */
 }
+
 
 .text-5c {
   display: inline-block;

@@ -343,7 +343,7 @@ const handlePayButtonClick = async () => {
               type='text'
               name='phoneNumber'
               className={`text-input ${!phoneNumberValid ? 'invalid-field' : ''}`}
-              placeholder={targetLanguage === 'en' ? '*Phone number' : '*Номер телефону'}
+              placeholder={targetLanguage === 'en' ? '*Phone number(+381234567890)' : '*Номер телефону(+381234567890)'}
               pattern="^\+?[0-9\s-]*$"
               title={targetLanguage === 'en' ? 'Enter a valid phone number' : 'Введіть коректний номер телефону'}
               onChange={(e) => {
@@ -481,7 +481,7 @@ const handlePayButtonClick = async () => {
         ? 'Payment method'
         : 'Спосіб оплати'}</span>
         </div>
-          {viewportWidth < 1200 && viewportWidth > 991 ? (
+          {viewportWidth < 1200 ? (
             <>
               <div className='form-row1'>
                 <input
