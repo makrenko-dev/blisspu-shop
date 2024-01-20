@@ -23,6 +23,7 @@ export default function Full_product() {
   const [translatedDescriptions, setTranslatedDescriptions] = useState([]);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [isSortingOpen, setIsSortingOpen] = useState(false);
+  const [canMakeRequest, setCanMakeRequest] = useState(true);
 
   const handleToggleFilters = () => {
   setIsFiltersOpen((prevState) => !prevState);
@@ -115,10 +116,10 @@ const handleToggleSorting = () => {
 }, [targetLanguage, textElements]);
 
 
-  useEffect(() => {
-    // Fetching data from the API when the component mounts
-    fetchFilteredData();
-  }, [selectedColors, burnTime, priceRange, selectedCategory, visibleProducts]);
+    useEffect(() => {
+      fetchFilteredData();
+    }, [selectedColors, burnTime, priceRange, selectedCategory, visibleProducts]);
+
 
   const fetchFilteredData = () => {
     const queryParams = [];
@@ -147,14 +148,14 @@ const handleToggleSorting = () => {
     const queryString = queryParams.join('&');
     
     // Fetch data from the API with the constructed query string
-    fetch(`https://blisspu.com.ua/api/product/forclient?${queryString}`)
-      .then(response => response.json())
-      .then(data => {
-        setProducts(data);
-     
-      })
-      .catch(error => console.error('Error fetching filtered data:', error));
-  };
+     fetch(`https://blisspu.com.ua/api/product/forclient?${queryString}`)
+    .then(response => response.json())
+    .then(data => {
+      setProducts(data);
+
+    })
+    .catch(error => console.error('Error fetching filtered data:', error));
+};
 
   const handleColorChange = color => {
     setSelectedColors(prevColors =>
@@ -179,7 +180,14 @@ const handleToggleSorting = () => {
   };
 
   const handlePriceRangeChange = range => {
-    setPriceRange(range);
+    if (canMakeRequest) {
+    setCanMakeRequest(false);
+     setPriceRange(range);
+    setTimeout(() => {
+      setCanMakeRequest(true);
+    }, 500); // Adjust the delay time as needed
+  }
+   
   };
 
   const handleSelectCategory = category => {
