@@ -19,11 +19,11 @@ function App() {
         <CartProvider>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Main_page />} />
+            <Route path="/" element={<Main_page isMainPage={true} isAboutProductPage={false}/>} />
             <Route path="/about" element={<About_full />} />
             <Route path="/all" element={<All_products />} />
             <Route path="/zakaz" element={<Oformlenie />} />
-            <Route path="/product/:id" element={<About_Product isAboutProductPage={true} />} />
+            <Route path="/product/:id" element={<About_Product isAboutProductPage={true} isMainPage={false}/>} />
             <Route path="/cart" element={<Cart_Full />} />
             <Route path="/help" element={<Help />} />
             <Route path="/contacts" element={<Footer />} />

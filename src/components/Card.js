@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import translateText from '../components/translateText';
 import { useLanguage } from '../components/LanguageContext';
 
-export default function Card({ id, name, description, price, discount, img }) {
+export default function Card({ id, name, description, price, discount, img,isAboutProductPage,isMainPage}) {
   const discountedPrice = price - (price * (discount / 100));
   const { targetLanguage } = useLanguage();
   const getCurrency = () => {
     return targetLanguage === 'en' ? 'uah' : 'грн';
   };
   return (
-    <Link to={`/product/${id}`} className='main-containerc'>
+    <Link to={`/product/${id}`} className='main-containerc122'>
       <div className='groupcc'>
         <div className='imgc' />
         {discount !== 0 && <span className='textc'>sale</span>}

@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 
 const fallbackImage = "/assets/images/as7_1.png";
 
-const About_Product = ({ isAboutProductPage }) => {
+const About_Product = ({ isAboutProductPage,isMainPage }) => {
 
   useEffect(() => {
     updateWrapperHeight();
@@ -509,6 +509,7 @@ if (productData) {
                 discount={similarProduct.discount}
                 image={similarProduct.img && similarProduct.img[0].img}
                 isAboutProductPage={isAboutProductPage}
+                isMainPage={isMainPage}
               />
         ))}
           </div>

@@ -6,7 +6,7 @@ import { useLanguage } from '../components/LanguageContext';
 
 const fallbackImage = "/assets/images/as7.png";
 
-export default function Card_all({ id, name, translatedDescription, price, discount, image, isAboutProductPage }) {
+export default function Card_all({ id, name, translatedDescription, price, discount, image, isAboutProductPage,isMainPage }) {
   const discountedPrice = price - (price * (discount / 100));
   const { targetLanguage } = useLanguage();
   const location = useLocation();
@@ -27,7 +27,7 @@ export default function Card_all({ id, name, translatedDescription, price, disco
 
 
   return (
-    <Link to={`/product/${id}`} className={` ${isAboutProductPage ? 'main-containerc11' : 'main-containerc'}`}>
+    <Link to={`/product/${id}`} className={` ${isAboutProductPage ? 'main-containerc11' : isMainPage ? 'main-containerc12' : 'main-containerc'}`}>
       <div className={` ${isAboutProductPage ? 'groupc11' : 'groupc'}`}>
         <img
           className={` ${isAboutProductPage ? 'picc_a11' : 'picc_a'}`}

@@ -7,7 +7,7 @@ import './Special.css';
 import translateText from '../components/translateText';
 import { useLanguage } from '../components/LanguageContext';
 
-function Special() {
+function Special({ isAboutProductPage,isMainPage }) {
   const [specialProducts, setSpecialProducts] = useState([]);
   const [itemsPerSlide, setItemsPerSlide] = useState(3); // Default to 3 items per slide
   const { targetLanguage } = useLanguage();
@@ -91,7 +91,8 @@ function Special() {
           <Carousel.Item key={slideIndex}>
             <div className="sp">
               {filteredSpecialProducts.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide).map((product, index) => (
-                <Card key={index} {...product} />
+                <Card key={index} {...product} isAboutProductPage={isAboutProductPage}
+                isMainPage={isMainPage}/>
               ))}
             </div>
           </Carousel.Item>

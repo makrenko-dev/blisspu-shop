@@ -7,14 +7,14 @@ import Asorti from '../components/Asorti';
 import Footer from '../components/Footer';
 import About_Product from '../components/About_Product';
 
-function Main_page() {
+function Main_page({ isAboutProductPage,isMainPage }) {
    useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <div className="App">
       <Img_full />
-      <Special />
+      <Special isAboutProductPage={isAboutProductPage} isMainPage={isMainPage}/>
       <About />
       <Asorti />
     </div>
