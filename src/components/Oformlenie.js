@@ -22,6 +22,8 @@ export default function Oformlenie() {
    const [totalPrice, setTotalPrice] = useState(0)
    const formRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState('+380');
+
   const handleDeliveryMethodChange = (event) => {
     setDeliveryMethod(event.target.value);
   };
@@ -129,6 +131,9 @@ if(cartData.length === 0){
  
 const isEmailValid = emailRegex.test(email);
 setEmailValid(isEmailValid);
+if (!isEmailValid) {
+  highlightInvalidField('email');
+}
 if (isEmailValid) {
   removeInvalidField('email');
 }
@@ -136,6 +141,10 @@ if (isEmailValid) {
 // Phone number validation
 const isPhoneValid = phoneRegex.test(phoneNumber);
 setPhoneNumberValid(isPhoneValid);
+console.log(isPhoneValid,'isPhoneValid')
+if (!isPhoneValid) {
+  highlightInvalidField('phoneNumber');
+}
 if (isPhoneValid) {
   removeInvalidField('phoneNumber');
 }
@@ -330,7 +339,7 @@ const handlePayButtonClick = async () => {
             <input
               type='email'
               name='email'
-              className={`text-input ${!emailValid ? 'invalid-field' : ''}`}
+              className={`text-input`}
               placeholder={targetLanguage === 'en' ? '*Email' : '*Електрона адреса'}
               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
               title={targetLanguage === 'en' ? 'Enter a valid email address' : 'Введіть коректну електронну адресу'}
@@ -339,18 +348,33 @@ const handlePayButtonClick = async () => {
                 
               }}
             />
-           <input
-              type='text'
-              name='phoneNumber'
-              className={`text-input ${!phoneNumberValid ? 'invalid-field' : ''}`}
-              placeholder={targetLanguage === 'en' ? '*Phone number(+381234567890)' : '*Номер телефону(+381234567890)'}
-              pattern="^\+?[0-9\s-]*$"
-              title={targetLanguage === 'en' ? 'Enter a valid phone number' : 'Введіть коректний номер телефону'}
-              onChange={(e) => {
-                setPhoneNumberValid(true);
-                
-              }}
-            />
+            <input
+                type='text'
+                name='phoneNumber'
+                className={`text-input`}
+                placeholder={targetLanguage === 'en' ? '*Phone number(+381234567890)' : '*Номер телефону(+381234567890)'}
+                pattern="^\+?[0-9\s-]*$"
+                title={targetLanguage === 'en' ? 'Enter a valid phone number' : 'Введіть коректний номер телефону'}
+                value={phoneNumber} // Use the controlled component approach by setting the value prop
+                 onKeyDown={(e) => {
+                    // Prevent backspace if the current input is just '+380'
+                    if (e.key === 'Backspace' && phoneNumber === '+380') {
+                      e.preventDefault();
+                    }
+                  }}
+                 onChange={(e) => {
+                    setPhoneNumberValid(true);
+                    const inputValue = e.target.value;
+
+                    // Allow deleting any part of the entered phone number
+                    const sanitizedValue = inputValue.startsWith('+380') ? inputValue : `+380${inputValue}`;
+
+                    setPhoneNumber(sanitizedValue);
+                    removeInvalidField('phoneNumber');
+                  }}
+              />
+
+          
           </div>
         
         <div className='form-zag'>
