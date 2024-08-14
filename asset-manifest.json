@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/blisspu/static/css/main.e7dc6269.css",
-    "main.js": "/blisspu/static/js/main.10e8e9ff.js",
-    "static/media/main.png": "/blisspu/static/media/main.a8e69391e3a73b022f78.png",
-    "static/media/as8.png": "/blisspu/static/media/as8.872e289d7cfedf2e532c.png",
-    "static/media/as1.png": "/blisspu/static/media/as1.691e17b91550311a59f6.png",
-    "static/media/as6.png": "/blisspu/static/media/as6.884d78445402d18bccf2.png",
-    "static/media/as3.png": "/blisspu/static/media/as3.92d83034bdfbf43e8cc5.png",
-    "static/media/a1.png": "/blisspu/static/media/a1.abcea621db0448775780.png",
-    "static/media/candle_pro.png": "/blisspu/static/media/candle_pro.c29c58c7e5cbeb4edd7a.png",
-    "static/media/a2.png": "/blisspu/static/media/a2.6d9493ddfda64f954ebc.png",
-    "static/media/as2.png": "/blisspu/static/media/as2.74b441b1451fbf76e335.png",
-    "static/media/as5.png": "/blisspu/static/media/as5.cd3716ed677c840dbf74.png",
-    "static/media/as4.png": "/blisspu/static/media/as4.e42dd060788b644eb65a.png",
-    "static/media/as9.png": "/blisspu/static/media/as9.599dcee3e26a0a0543cb.png",
-    "static/media/sv.png": "/blisspu/static/media/sv.987d7c76dc9b0abf94f3.png",
-    "static/media/cart.svg": "/blisspu/static/media/cart.1e193a3211770fb8c0fb.svg",
-    "index.html": "/blisspu/index.html",
-    "main.e7dc6269.css.map": "/blisspu/static/css/main.e7dc6269.css.map",
-    "main.10e8e9ff.js.map": "/blisspu/static/js/main.10e8e9ff.js.map"
+    "main.css": "/blisspu-shop/static/css/main.6c6b822f.css",
+    "main.js": "/blisspu-shop/static/js/main.10e8e9ff.js",
+    "static/media/main.png": "/blisspu-shop/static/media/main.a8e69391e3a73b022f78.png",
+    "static/media/as8.png": "/blisspu-shop/static/media/as8.872e289d7cfedf2e532c.png",
+    "static/media/as1.png": "/blisspu-shop/static/media/as1.691e17b91550311a59f6.png",
+    "static/media/as6.png": "/blisspu-shop/static/media/as6.884d78445402d18bccf2.png",
+    "static/media/as3.png": "/blisspu-shop/static/media/as3.92d83034bdfbf43e8cc5.png",
+    "static/media/a1.png": "/blisspu-shop/static/media/a1.abcea621db0448775780.png",
+    "static/media/candle_pro.png": "/blisspu-shop/static/media/candle_pro.c29c58c7e5cbeb4edd7a.png",
+    "static/media/a2.png": "/blisspu-shop/static/media/a2.6d9493ddfda64f954ebc.png",
+    "static/media/as2.png": "/blisspu-shop/static/media/as2.74b441b1451fbf76e335.png",
+    "static/media/as5.png": "/blisspu-shop/static/media/as5.cd3716ed677c840dbf74.png",
+    "static/media/as4.png": "/blisspu-shop/static/media/as4.e42dd060788b644eb65a.png",
+    "static/media/as9.png": "/blisspu-shop/static/media/as9.599dcee3e26a0a0543cb.png",
+    "static/media/sv.png": "/blisspu-shop/static/media/sv.987d7c76dc9b0abf94f3.png",
+    "static/media/cart.svg": "/blisspu-shop/static/media/cart.1e193a3211770fb8c0fb.svg",
+    "index.html": "/blisspu-shop/index.html",
+    "main.6c6b822f.css.map": "/blisspu-shop/static/css/main.6c6b822f.css.map",
+    "main.10e8e9ff.js.map": "/blisspu-shop/static/js/main.10e8e9ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7dc6269.css",
+    "static/css/main.6c6b822f.css",
     "static/js/main.10e8e9ff.js"
   ]
 }
